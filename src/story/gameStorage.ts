@@ -1,6 +1,11 @@
-import { SAVE_VERSION } from "./gameState";
-import type { EndingId, GameState, StoryFlag } from "./types";
-import { walkingSkeletonNodes } from "./walkingSkeleton";
+import { getVisibleBeats, SAVE_VERSION } from "./gameState";
+import { storyNodes } from "./story";
+import type {
+  EndingId,
+  GameState,
+  StoryFlag,
+  StoryNodeId,
+} from "./types";
 
 export const GAME_SAVE_KEY = "kyiv-rental:save";
 
@@ -25,7 +30,7 @@ const endingIds = new Set<EndingId>([
 ]);
 
 const choiceIds = new Set(
-  Object.values(walkingSkeletonNodes).flatMap(
+  Object.values(storyNodes).flatMap(
     (node) => node.choices?.map((choice) => choice.id) ?? [],
   ),
 );
@@ -72,11 +77,10 @@ export function parseGameState(value: unknown): GameState | null {
     return null;
   }
 
-  const scene = walkingSkeletonNodes[value.nodeId];
+  const scene = storyNodes[value.nodeId as StoryNodeId];
 
   if (
     !scene ||
-    !isIntegerInRange(value.beatIndex, 0, scene.beats.length - 1) ||
     !isIntegerInRange(value.oliaRelationship, 0, 100) ||
     !isIntegerInRange(value.maksRelationship, 0, 100) ||
     !isIntegerInRange(value.budgetUAH, 0, Number.MAX_SAFE_INTEGER) ||
@@ -95,8 +99,15 @@ export function parseGameState(value: unknown): GameState | null {
     return null;
   }
 
+  if (
+    (scene.kind === "ending" && value.endingId !== scene.id) ||
+    (scene.kind === "scene" && value.endingId !== undefined)
+  ) {
+    return null;
+  }
+
   const state: GameState = {
-    nodeId: value.nodeId,
+    nodeId: value.nodeId as StoryNodeId,
     beatIndex: value.beatIndex as number,
     oliaRelationship: value.oliaRelationship as number,
     maksRelationship: value.maksRelationship as number,
@@ -109,6 +120,12 @@ export function parseGameState(value: unknown): GameState | null {
 
   if (value.endingId !== undefined) {
     state.endingId = value.endingId as EndingId;
+  }
+
+  const visibleBeats = getVisibleBeats(scene, state);
+
+  if (!isIntegerInRange(state.beatIndex, 0, visibleBeats.length - 1)) {
+    return null;
   }
 
   return state;

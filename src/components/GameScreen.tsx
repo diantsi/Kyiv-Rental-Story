@@ -1,9 +1,10 @@
 import { useEffect, useReducer } from "react";
 import {
   gameReducer,
+  getVisibleBeats,
 } from "../story/gameState";
 import { saveGameState } from "../story/gameStorage";
-import { walkingSkeletonNodes } from "../story/walkingSkeleton";
+import { storyNodes } from "../story/story";
 import type { GameState, StoryChoice } from "../story/types";
 import { ChoiceList } from "./ChoiceList";
 import { DialogueBox } from "./DialogueBox";
@@ -11,13 +12,15 @@ import { SceneFrame } from "./SceneFrame";
 
 type GameScreenProps = {
   initialState: GameState;
+  onRestart: () => void;
 };
 
-export function GameScreen({ initialState }: GameScreenProps) {
+export function GameScreen({ initialState, onRestart }: GameScreenProps) {
   const [state, dispatch] = useReducer(gameReducer, initialState);
-  const scene = walkingSkeletonNodes[state.nodeId];
-  const currentBeat = scene.beats[state.beatIndex];
-  const isLastBeat = state.beatIndex === scene.beats.length - 1;
+  const scene = storyNodes[state.nodeId];
+  const beats = getVisibleBeats(scene, state);
+  const currentBeat = beats[state.beatIndex];
+  const isLastBeat = state.beatIndex === beats.length - 1;
 
   useEffect(() => {
     saveGameState(state);
@@ -31,15 +34,16 @@ export function GameScreen({ initialState }: GameScreenProps) {
     dispatch({ type: "choose", choiceId: choice.id });
   }
 
-  const showChoices = isLastBeat && scene.choices;
-  const canAdvance = !isLastBeat || scene.nextNodeId;
+  const showChoices = isLastBeat && scene.kind === "scene" && scene.choices;
+  const canAdvance =
+    !isLastBeat || (scene.kind === "scene" && Boolean(scene.nextNodeId));
 
   return (
     <SceneFrame scene={scene}>
       <DialogueBox
         beat={currentBeat}
         currentBeat={state.beatIndex + 1}
-        totalBeats={scene.beats.length}
+        totalBeats={beats.length}
       />
 
       {showChoices ? (
@@ -49,9 +53,13 @@ export function GameScreen({ initialState }: GameScreenProps) {
           Далі
         </button>
       ) : (
-        <p className="sample-complete" role="status">
-          Кінець демонстраційного фрагмента.
-        </p>
+        <section className="ending-panel" aria-labelledby="ending-summary">
+          <h2 id="ending-summary">Наслідок</h2>
+          <p>{scene.consequence}</p>
+          <button className="primary-button" type="button" onClick={onRestart}>
+            Почати спочатку
+          </button>
+        </section>
       )}
     </SceneFrame>
   );

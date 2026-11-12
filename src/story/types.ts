@@ -3,11 +3,6 @@ export type SceneVisual = {
   backgroundImage?: string;
 };
 
-export type DialogueBeat = {
-  speaker: string;
-  text: string;
-};
-
 export type StoryFlag =
   | "larysa_contact"
   | "contract_checked"
@@ -16,6 +11,32 @@ export type StoryFlag =
   | "scam_recognized";
 
 export type EndingId = `F${1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9}`;
+
+export type SceneId =
+  | "01"
+  | "02"
+  | "03"
+  | "04L"
+  | "05L"
+  | "06I"
+  | "07I"
+  | "08O"
+  | "09O"
+  | "10S"
+  | "11N"
+  | "12N"
+  | "13N";
+
+export type StoryNodeId = SceneId | EndingId;
+
+export type DialogueBeat = {
+  speaker: string;
+  text: string;
+  condition?: {
+    flag: StoryFlag;
+    equals?: boolean;
+  };
+};
 
 export type StoryEffects = {
   oliaRelationship?: number;
@@ -26,8 +47,10 @@ export type StoryEffects = {
 };
 
 export type StoryTransition = {
-  nextNodeId: string;
+  nextNodeId: StoryNodeId;
   effects?: StoryEffects;
+  minimumBudgetUAH?: number;
+  insufficientBudgetEndingId?: EndingId;
 };
 
 export type StoryChoice = StoryTransition & {
@@ -36,19 +59,24 @@ export type StoryChoice = StoryTransition & {
 };
 
 export type StoryNode = {
-  id: string;
+  id: StoryNodeId;
+  kind: "scene" | "ending";
   title: string;
   location?: string;
   time?: string;
+  description: string;
+  consequence: string;
   visual?: SceneVisual;
   beats: DialogueBeat[];
-  nextNodeId?: string;
+  nextNodeId?: StoryNodeId;
   effects?: StoryEffects;
+  minimumBudgetUAH?: number;
+  insufficientBudgetEndingId?: EndingId;
   choices?: StoryChoice[];
 };
 
 export type GameState = {
-  nodeId: string;
+  nodeId: StoryNodeId;
   beatIndex: number;
   oliaRelationship: number;
   maksRelationship: number;

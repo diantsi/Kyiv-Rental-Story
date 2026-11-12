@@ -8,7 +8,7 @@ type ChoiceListProps = {
 export function ChoiceList({ choices, onChoose }: ChoiceListProps) {
   return (
     <section className="choice-panel" aria-labelledby="choice-heading">
-      <h2 id="choice-heading">Що запропонує Марта?</h2>
+      <h2 id="choice-heading">Що зробить Марта?</h2>
       <div className="choice-list">
         {choices.map((choice) => (
           <button

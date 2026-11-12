@@ -3,12 +3,13 @@ import type {
   GameState,
   StoryEffects,
   StoryFlag,
+  StoryNode,
   StoryTransition,
 } from "./types";
 import {
   initialNodeId,
-  walkingSkeletonNodes,
-} from "./walkingSkeleton";
+  storyNodes,
+} from "./story";
 
 export const SAVE_VERSION = 1;
 
@@ -93,19 +94,44 @@ function isEndingId(nodeId: string): nodeId is EndingId {
   return /^F[1-9]$/.test(nodeId);
 }
 
+export function getVisibleBeats(node: StoryNode, state: GameState) {
+  return node.beats.filter((beat) => {
+    if (!beat.condition) {
+      return true;
+    }
+
+    const expectedValue = beat.condition.equals ?? true;
+    return state.flags[beat.condition.flag] === expectedValue;
+  });
+}
+
 export function resolveTransition(
   state: GameState,
   transition: StoryTransition,
   choiceId?: string,
 ): GameState {
+  const choices = choiceId ? [...state.choices, choiceId] : state.choices;
+
+  if (
+    transition.minimumBudgetUAH !== undefined &&
+    state.budgetUAH < transition.minimumBudgetUAH &&
+    transition.insufficientBudgetEndingId
+  ) {
+    return {
+      ...state,
+      nodeId: transition.insufficientBudgetEndingId,
+      beatIndex: 0,
+      choices,
+      endingId: transition.insufficientBudgetEndingId,
+    };
+  }
+
   const resolvedState = applyEffects(state, transition.effects);
-  const choices = choiceId
-    ? [...resolvedState.choices, choiceId]
-    : resolvedState.choices;
 
   if (isEndingId(transition.nextNodeId)) {
     return {
       ...resolvedState,
+      nodeId: transition.nextNodeId,
       choices,
       beatIndex: 0,
       endingId: transition.nextNodeId,
@@ -117,6 +143,7 @@ export function resolveTransition(
   if (thresholdEnding) {
     return {
       ...resolvedState,
+      nodeId: thresholdEnding,
       choices,
       beatIndex: 0,
       endingId: thresholdEnding,
@@ -133,31 +160,34 @@ export function resolveTransition(
 }
 
 export function gameReducer(state: GameState, action: GameAction): GameState {
-  if (state.endingId) {
-    return state;
-  }
-
-  const scene = walkingSkeletonNodes[state.nodeId];
+  const scene = storyNodes[state.nodeId];
 
   if (!scene) {
     return state;
   }
 
   if (action.type === "advance") {
-    const isLastBeat = state.beatIndex === scene.beats.length - 1;
+    const beats = getVisibleBeats(scene, state);
+    const isLastBeat = state.beatIndex === beats.length - 1;
 
     if (!isLastBeat) {
       return { ...state, beatIndex: state.beatIndex + 1 };
     }
 
-    if (!scene.nextNodeId) {
+    if (scene.kind === "ending" || !scene.nextNodeId) {
       return state;
     }
 
     return resolveTransition(state, {
       nextNodeId: scene.nextNodeId,
       effects: scene.effects,
+      minimumBudgetUAH: scene.minimumBudgetUAH,
+      insufficientBudgetEndingId: scene.insufficientBudgetEndingId,
     });
+  }
+
+  if (scene.kind === "ending") {
+    return state;
   }
 
   const choice = scene.choices?.find(

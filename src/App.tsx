@@ -14,10 +14,12 @@ export function App() {
   const [screen, setScreen] = useState<AppScreen>("menu");
   const [savedGame] = useState(loadGameState);
   const [activeGame, setActiveGame] = useState<GameState | null>(null);
+  const [gameSession, setGameSession] = useState(0);
 
   function startNewGame() {
     clearGameState();
     setActiveGame(createInitialGameState());
+    setGameSession((session) => session + 1);
     setScreen("game");
   }
 
@@ -41,5 +43,11 @@ export function App() {
     );
   }
 
-  return <GameScreen initialState={activeGame ?? createInitialGameState()} />;
+  return (
+    <GameScreen
+      key={gameSession}
+      initialState={activeGame ?? createInitialGameState()}
+      onRestart={startNewGame}
+    />
+  );
 }

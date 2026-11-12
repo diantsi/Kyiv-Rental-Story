@@ -153,7 +153,7 @@ button:focus-visible {
 
 .dialogue-box,
 .choice-panel,
-.sample-complete {
+.ending-panel {
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 1.25rem;
   background: rgba(11, 15, 18, 0.9);
@@ -234,11 +234,21 @@ button:focus-visible {
   border-color: rgba(241, 202, 114, 0.62);
 }
 
-.sample-complete {
+.ending-panel {
   margin: 1rem 0 0;
-  padding: 1rem 1.25rem;
-  color: #cbd0d2;
-  text-align: center;
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.ending-panel h2 {
+  margin: 0;
+  color: #f1ca72;
+  font-size: 1rem;
+}
+
+.ending-panel p {
+  margin: 0.75rem 0 1.25rem;
+  color: #d8dcdd;
+  line-height: 1.65;
 }
 
 @media (max-width: 40rem) {
