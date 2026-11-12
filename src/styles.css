@@ -1,0 +1,249 @@
+:root {
+  color: #f5f1e8;
+  background: #10161b;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid #f1ca72;
+  outline-offset: 3px;
+}
+
+.main-menu,
+.scene-frame {
+  min-height: 100vh;
+}
+
+.main-menu {
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(241, 202, 114, 0.16), transparent 34rem),
+    linear-gradient(145deg, #182128 0%, #0d1216 100%);
+}
+
+.menu-panel {
+  width: min(100%, 44rem);
+  padding: clamp(2rem, 8vw, 5rem);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  background: rgba(17, 23, 28, 0.82);
+  box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.34);
+  text-align: center;
+}
+
+.eyebrow,
+.scene-number {
+  margin: 0 0 0.75rem;
+  color: #f1ca72;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.menu-panel h1 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 11vw, 6rem);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+.menu-summary {
+  max-width: 32rem;
+  margin: 1.5rem auto 2.25rem;
+  color: #cbd0d2;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  line-height: 1.65;
+}
+
+.primary-button,
+.choice-button {
+  min-height: 3rem;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  cursor: pointer;
+}
+
+.primary-button {
+  padding: 0.8rem 1.4rem;
+  background: #f1ca72;
+  color: #17140e;
+  font-weight: 750;
+}
+
+.primary-button:active,
+.choice-button:active {
+  transform: translateY(1px);
+}
+
+.scene-frame {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  background-position: center;
+  background-size: cover;
+}
+
+.scene-header {
+  width: min(100%, 72rem);
+  margin: 0 auto;
+}
+
+.scene-header h1 {
+  max-width: 16ch;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.35rem, 7vw, 5.25rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.scene-meta {
+  margin: 1rem 0 0;
+  color: #c8cdcf;
+  line-height: 1.5;
+}
+
+.story-controls {
+  width: min(100%, 58rem);
+  margin: 0 auto;
+}
+
+.dialogue-box,
+.choice-panel,
+.sample-complete {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 1.25rem;
+  background: rgba(11, 15, 18, 0.9);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(1rem);
+}
+
+.dialogue-box {
+  min-height: 11rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.dialogue-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.speaker-name {
+  margin: 0;
+  color: #f1ca72;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.beat-count {
+  color: #8f989c;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.dialogue-text {
+  margin: 1rem 0 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.2rem, 3vw, 1.55rem);
+  line-height: 1.55;
+}
+
+.next-button {
+  display: block;
+  margin: 1rem 0 0 auto;
+}
+
+.choice-panel {
+  margin-top: 1rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+}
+
+.choice-panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.choice-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.choice-button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.07);
+  color: #f7f4ed;
+  line-height: 1.45;
+  text-align: left;
+}
+
+.primary-button:hover,
+.choice-button:hover {
+  filter: brightness(1.08);
+}
+
+.choice-button:hover {
+  border-color: rgba(241, 202, 114, 0.62);
+}
+
+.sample-complete {
+  margin: 1rem 0 0;
+  padding: 1rem 1.25rem;
+  color: #cbd0d2;
+  text-align: center;
+}
+
+@media (max-width: 40rem) {
+  .scene-frame {
+    gap: 2rem;
+  }
+
+  .scene-meta span {
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .choice-panel {
+    max-height: 48vh;
+    overflow-y: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
