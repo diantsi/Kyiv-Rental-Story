@@ -1,207 +1,207 @@
-# Kyiv Rental
+# Київська оренда
 
-## 1. Scenario title
+## 1. Назва сценарію
 
-**Kyiv Rental**
+**«Київська оренда»**
 
-An interactive web novel about three friends, a limited budget, and apartments that almost always come with a hidden catch.
+Інтерактивна вебновела про трьох друзів, обмежений бюджет і квартири, які майже завжди мають приховане «але».
 
-## 2. Short concept
+## 2. Коротка концепція
 
-The dormitory where Marta, Olia, and Maks live is closing for renovations. Rather than move into worse conditions at another dormitory, the friends decide to rent an apartment together in Kyiv. They have UAH 20,000 for the initial payment and related expenses, and only a few days to find a place.
+Гуртожиток Марти, Олі та Макса закривають на ремонт. Щоб не переїжджати в гірші умови іншого гуртожитку, друзі вирішують разом орендувати квартиру в Києві. У них є 20 000 гривень на перший платіж і супутні витрати та лише кілька днів на пошук.
 
-The player makes decisions on Marta’s behalf. They must balance Olia’s need for comfort, Maks’s frugality, Marta’s own honesty, and the pressure of the rental market. Some offers are dangerous, some are simply poor value, and some decisions damage the friends’ relationships faster than they bring the group closer to moving. A good ending is possible only if the group preserves its financial reserve, avoids falling out, and waits for a reasonable option.
+Гравець ухвалює рішення за Марту. Треба балансувати між комфортом Олі, економністю Макса, власною чесністю та тиском ринку. Частина пропозицій небезпечна, частина просто невигідна, а деякі рішення псують стосунки швидше, ніж наближають переїзд. Хороший фінал можливий лише тоді, коли команда не витратить резерв, не розсвариться і дочекається нормального варіанта.
 
-The central conflict is to find a home quickly without accepting fraud, an opaque contract, or conditions that cause the friends to stop being friends.
+Основний конфлікт: швидко знайти житло, не погодившись на шахрайство, непрозорий договір або умови, через які друзі перестануть бути друзями.
 
-## 3. Characters
+## 3. Персонажі
 
-### Marta
+### Марта
 
-- **Role in the story:** the protagonist; the player chooses her lines and actions.
-- **Personality:** organized and attentive, but sometimes takes too much responsibility upon herself.
-- **Motivation:** find an apartment in time and prevent the group from falling apart.
-- **Relationships:** Olia and Maks’s blockmate and close friend; often mediates between them.
+- **Роль у сюжеті:** головна героїня; гравець обирає її репліки та дії.
+- **Характер:** організована, уважна, іноді надто бере відповідальність на себе.
+- **Мотивація:** знайти квартиру вчасно й не допустити розпаду компанії.
+- **Зв’язки:** сусідка по блоку та близька подруга Олі й Макса; часто стає посередницею між ними.
 
-### Olia
+### Оля
 
-- **Role in the story:** represents the need for comfort, safety, and reasonable living conditions.
-- **Personality:** direct, sensitive to having her concerns dismissed, and attentive to detail.
-- **Motivation:** have a private room, reliable internet, the ability to work and study online, and access to a shelter.
-- **Relationships:** trusts Marta as long as she genuinely feels heard; frequently argues with Maks because their priorities differ.
+- **Роль у сюжеті:** представляє потребу в комфорті, безпеці й нормальних побутових умовах.
+- **Характер:** пряма, чутлива до знецінення, уважна до деталей.
+- **Мотивація:** мати окрему кімнату, стабільний інтернет, можливість працювати й навчатися онлайн, доступ до укриття.
+- **Зв’язки:** довіряє Марті, доки та справді її чують; часто сперечається з Максом через різні пріоритети.
 
-### Maks
+### Макс
 
-- **Role in the story:** represents the financial side of the search.
-- **Personality:** practical and ironic; willing to tolerate inconvenience in exchange for a low price.
-- **Motivation:** avoid spending all their money on rent or going into debt.
-- **Relationships:** friends with Marta and Olia, but quickly becomes frustrated when his budget concerns are ignored.
+- **Роль у сюжеті:** представляє фінансову сторону пошуку.
+- **Характер:** практичний, іронічний, готовий терпіти незручності заради низької ціни.
+- **Мотивація:** не витратити всі гроші на оренду й не залізти в борги.
+- **Зв’язки:** дружить із Мартою та Олею, але швидко дратується, коли його аргументи про бюджет ігнорують.
 
-### Larysa
+### Лариса
 
-- **Role in the story:** a pushy realtor who attracts clients with appealing but outdated listings.
-- **Personality:** tireless and intrusive; reframes every defect as an advantage.
-- **Motivation:** close a deal and collect a 75% commission.
-- **Relationships:** after the first contact, repeatedly calls Marta even after the friends reject her apartment.
+- **Роль у сюжеті:** напориста рієлторка, яка заманює клієнтів красивими неактуальними оголошеннями.
+- **Характер:** невтомна, нав’язлива, будь-який недолік називає перевагою.
+- **Мотивація:** закрити угоду й отримати 75% комісії.
+- **Зв’язки:** після першого контакту постійно телефонує Марті, навіть якщо друзі відмовилися від її квартири.
 
-### Ihnat
+### Ігнат
 
-- **Role in the story:** realtor for the apartment near Vasylkivska.
-- **Personality:** overly familiar and passive-aggressive; speaks as though agreeing to a viewing already means agreeing to rent.
-- **Motivation:** pressure clients into signing a weak contract without recording additional charges in writing.
-- **Relationships:** pressures Marta and Maks, while dismissing Olia’s questions as “unnecessary bureaucracy.”
+- **Роль у сюжеті:** рієлтор квартири на Васильківській.
+- **Характер:** фамільярний, пасивно-агресивний, розмовляє так, ніби перегляд уже означає згоду.
+- **Мотивація:** змусити клієнтів підписати слабкий договір, не фіксуючи додаткові платежі письмово.
+- **Зв’язки:** тисне на Марту й Макса, а запитання Олі називає «зайвою бюрократією».
 
-### Oksana
+### Оксана
 
-- **Role in the story:** owner of a good apartment with no commission.
-- **Personality:** initially welcoming, but prejudiced against young tenants.
-- **Motivation:** rent to people she considers “mature and reliable.”
-- **Relationships:** speaks with Marta by phone; discovers the lie about their ages while checking their documents.
+- **Роль у сюжеті:** власниця хорошої квартири без комісії.
+- **Характер:** спочатку привітна, але упереджена щодо молодих орендарів.
+- **Мотивація:** здати житло людям, яких вона вважає «дорослими й надійними».
+- **Зв’язки:** спілкується з Мартою телефоном; брехню про вік викриває під час перевірки документів.
 
-### Andrii
+### Андрій
 
-- **Role in the story:** realtor for the final apartment.
-- **Personality:** calm and specific, with no manufactured urgency.
-- **Motivation:** complete a transparent agreement and collect the standard 50% commission.
-- **Relationships:** answers all three friends’ questions and does not conceal the apartment’s shortcomings.
+- **Роль у сюжеті:** рієлтор фінальної квартири.
+- **Характер:** спокійний, конкретний, без штучної терміновості.
+- **Мотивація:** провести зрозумілу угоду й отримати стандартну комісію 50%.
+- **Зв’язки:** відповідає на всі запитання трійці та не приховує недоліків квартири.
 
-### “The Viber Owner”
+### «Власниця з Viber»
 
-- **Role in the story:** a scammer presenting someone else’s home as an apartment “prepared for her daughter.”
-- **Personality:** polite and outwardly caring, but constantly rushing the group.
-- **Motivation:** obtain a UAH 5,000 “reservation payment” before a viewing.
-- **Relationships:** attempts to manufacture trust with Marta as quickly as possible.
+- **Роль у сюжеті:** шахрайка, яка видає чуже житло за квартиру «для доньки».
+- **Характер:** ввічлива, турботлива на словах, постійно підганяє.
+- **Мотивація:** отримати 5 000 гривень «бронювання» до перегляду.
+- **Зв’язки:** намагається швидко створити з Мартою штучну довіру.
 
-### Dormitory supervisor
+### Комендантка
 
-- **Role in the story:** announces the dormitory renovations and sets the story in motion.
-- **Personality:** terse and exhausted; not responsible for the administration’s decision.
-- **Motivation:** relocate residents by the specified deadline.
-- **Relationships:** knows the three friends as residents of the same dormitory block.
+- **Роль у сюжеті:** оголошує про ремонт гуртожитку й запускає історію.
+- **Характер:** суха й виснажена, не відповідає за рішення адміністрації.
+- **Мотивація:** переселити мешканців у визначені строки.
+- **Зв’язки:** знає трійцю як сусідів по одному блоку.
 
-### Game parameters
+### Ігрові параметри
 
-- **Relationship with Olia:** starts at 50. If it falls to 30 or below, Olia leaves the search and rents a room on her own.
-- **Relationship with Maks:** starts at 50. If it falls to 30 or below, Maks leaves the search and rents a room on his own.
-- **Budget:** starts at UAH 20,000. This is the money currently available for the initial payment, commission, transport, and reservation fees.
-- **Stress:** starts at 10. If it reaches 60, the three friends argue and end their joint search.
-- **Flags:** `larysa_contact`, `contract_checked`, `documents_checked`, `lied_to_oksana`, `scam_recognized`.
+- **Стосунки з Олею:** старт — 50. Якщо показник падає до 30 або нижче, Оля виходить із пошуку й орендує кімнату сама.
+- **Стосунки з Максом:** старт — 50. Якщо показник падає до 30 або нижче, Макс виходить із пошуку й орендує кімнату сам.
+- **Бюджет:** старт — 20 000 грн. Це гроші, доступні зараз на перший платіж, комісію, дорогу й бронювання.
+- **Стрес:** старт — 10. Якщо показник сягає 60, трійця свариться й припиняє спільний пошук.
+- **Прапорці:** `larysa_contact`, `contract_checked`, `documents_checked`, `lied_to_oksana`, `scam_recognized`.
 
-The numeric relationship and stress values are hidden. After a choice, the player sees short signals such as “Olia will remember that,” “Maks felt heard,” or “The pressure is rising.” Actual expenditure is shown directly.
+Числові значення стосунків і стресу приховані. Після вибору гравець бачить короткі сигнали: «Оля це запам’ятала», «Макс відчув, що його почули», «Тиск зростає». Сума фактичних витрат показується прямо.
 
-**Control check after every non-final choice:**
+**Контрольна перевірка після кожного нефінального вибору:**
 
-1. If both the Olia and Maks relationship values are 30 or below, or if stress is 60 or higher, proceed to ending `F8`.
-2. Otherwise, if the relationship with Olia is 30 or below, proceed to ending `F6`.
-3. Otherwise, if the relationship with Maks is 30 or below, proceed to ending `F7`.
-4. If none of these conditions apply, proceed to the specified next scene.
+1. Якщо стосунки з Олею і Максом одночасно не перевищують 30 або стрес дорівнює чи перевищує 60 — перехід до фіналу `F8`.
+2. Інакше, якщо стосунки з Олею не перевищують 30 — перехід до фіналу `F6`.
+3. Інакше, якщо стосунки з Максом не перевищують 30 — перехід до фіналу `F7`.
+4. Якщо жодна умова не спрацювала — перехід до вказаної наступної сцени.
 
-## 4. Scenario map
+## 4. Карта сценарію
 
-`Scene 01 → Scene 02`
+`Сцена 01 → Сцена 02`
 
-`Scene 02 → choose a search principle → control check → Scene 03`
+`Сцена 02 → вибір принципу пошуку → контрольна перевірка → Сцена 03`
 
-`Scene 03 → first listing`
+`Сцена 03 → перше оголошення`
 
-- `Option A: call → control check → Scene 04L`
-- `Option B: ignore → control check → Scene 06I`
+- `Варіант А: подзвонити → контрольна перевірка → Сцена 04L`
+- `Варіант Б: проігнорувати → контрольна перевірка → Сцена 06I`
 
-`Scene 04L → conversation with Larysa`
+`Сцена 04L → розмова з Ларисою`
 
-- `Option A: agree to a viewing → control check → Scene 05L`
-- `Option B: end the contact → control check → Scene 06I`
+- `Варіант А: погодитися на перегляд → контрольна перевірка → Сцена 05L`
+- `Варіант Б: завершити контакт → контрольна перевірка → Сцена 06I`
 
-`Scene 05L → Larysa’s apartment`
+`Сцена 05L → квартира Лариси`
 
-- `Option A: rent it → Ending F1`
-- `Option B or C: refuse → control check → Scene 06I`
+- `Варіант А: орендувати → Фінал F1`
+- `Варіант Б або В: відмовитися → контрольна перевірка → Сцена 06I`
 
-`Scene 06I → Ihnat’s listing`
+`Сцена 06I → оголошення Ігната`
 
-- `Option A: attend the viewing → control check → Scene 07I`
-- `Option B: skip it → control check → Scene 08O`
+- `Варіант А: піти на перегляд → контрольна перевірка → Сцена 07I`
+- `Варіант Б: пропустити → контрольна перевірка → Сцена 08O`
 
-`Scene 07I → Ihnat’s apartment`
+`Сцена 07I → квартира Ігната`
 
-- `Option A: sign → Ending F2`
-- `Option B or C: refuse → control check → Scene 08O`
+- `Варіант А: підписати → Фінал F2`
+- `Варіант Б або В: відмовитися → контрольна перевірка → Сцена 08O`
 
-`Scene 08O → call with Oksana`
+`Сцена 08O → дзвінок Оксані`
 
-- `Option A: tell the truth → control check → Scene 10S`
-- `Option B: lie → control check → Scene 09O`
-- `Option C: end the overly personal interview → control check → Scene 10S`
+- `Варіант А: сказати правду → контрольна перевірка → Сцена 10S`
+- `Варіант Б: збрехати → контрольна перевірка → Сцена 09O`
+- `Варіант В: завершити надто особисту співбесіду → контрольна перевірка → Сцена 10S`
 
-`Scene 09O → lie exposed → spend UAH 2,000 → control check → Scene 10S`
+`Сцена 09O → викриття брехні → витрата 2 000 грн → контрольна перевірка → Сцена 10S`
 
-`Scene 10S → fraudulent offer`
+`Сцена 10S → шахрайська пропозиція`
 
-- `Option A: transfer UAH 5,000 → Ending F3`
-- `Option B or C: do not pay → control check → Scene 11N`
+- `Варіант А: переказати 5 000 грн → Фінал F3`
+- `Варіант Б або В: не платити → контрольна перевірка → Сцена 11N`
 
-`Scene 11N → Andrii’s final offer`
+`Сцена 11N → фінальна пропозиція Андрія`
 
-- `Budget below UAH 19,500 → Ending F9`
-- `Budget of at least UAH 19,500 → Scene 12N`
+- `Бюджет менше 19 500 грн → Фінал F9`
+- `Бюджет від 19 500 грн → Сцена 12N`
 
-`Scene 12N → final viewing`
+`Сцена 12N → фінальний перегляд`
 
-- `Option A: complete a full inspection → control check → Scene 13N`
-- `Option B: proceed directly to payment → Ending F5`
-- `Option C: refuse → Ending F9`
+- `Варіант А: провести повну перевірку → контрольна перевірка → Сцена 13N`
+- `Варіант Б: одразу перейти до оплати → Фінал F5`
+- `Варіант В: відмовитися → Фінал F9`
 
-`Scene 13N → contract`
+`Сцена 13N → договір`
 
-- `Option A: add clarifications and sign → Ending F4`
-- `Option B: sign without clarifications → Ending F5`
-- `Option C: refuse → Ending F9`
+- `Варіант А: внести уточнення й підписати → Фінал F4`
+- `Варіант Б: підписати без уточнень → Фінал F5`
+- `Варіант В: відмовитися → Фінал F9`
 
-Global control-check transitions: `low relationship with Olia → F6`; `low relationship with Maks → F7`; `critical stress or low relationships with both → F8`.
+Глобальні переходи контрольної перевірки: `низькі стосунки з Олею → F6`; `низькі стосунки з Максом → F7`; `критичний стрес або низькі стосунки з обома → F8`.
 
-### 4.1. Branching scene diagram
+### 4.1. Розгалужена схема сцен
 
 ```mermaid
 flowchart TD
-    S01["01. Notice on the Door"] --> S02["02. Three People, Three Lists"]
-    S02 --> S03["03. Photos That Do Not Exist"]
+    S01["01. Оголошення на дверях"] --> S02["02. Три людини — три списки"]
+    S02 --> S03["03. Фото, яких не існує"]
 
-    S03 -->|Call Larysa| S04L["04L. The Apartment Is Already Taken"]
-    S03 -->|Ignore the listing| S06I["06I. A Viewing Means Agreement"]
+    S03 -->|Подзвонити Ларисі| S04L["04L. Квартира вже зайнята"]
+    S03 -->|Проігнорувати оголошення| S06I["06I. Перегляд означає згоду"]
 
-    S04L -->|Agree to a viewing| S05L["05L. Installation Art on the Fifteenth Floor"]
-    S04L -->|End the contact| S06I
-    S05L -->|Rent it| F1(["F1. Larysa’s Gem"])
-    S05L -->|Refuse| S06I
+    S04L -->|Погодитися на перегляд| S05L["05L. Артоб’єкт на п’ятнадцятому"]
+    S04L -->|Завершити контакт| S06I
+    S05L -->|Орендувати| F1(["F1. Ларисина перлина"])
+    S05L -->|Відмовитися| S06I
 
-    S06I -->|Attend the viewing| S07I["07I. A Contract in Translation"]
-    S06I -->|Skip it| S08O["08O. A Good Apartment for Grown-Ups"]
-    S07I -->|Sign the weak contract| F2(["F2. The Contract That Wrote Itself"])
-    S07I -->|Refuse| S08O
+    S06I -->|Піти на перегляд| S07I["07I. Договір із перекладом"]
+    S06I -->|Пропустити| S08O["08O. Хороша квартира для дорослих"]
+    S07I -->|Підписати слабкий договір| F2(["F2. Договір, який дописав себе"])
+    S07I -->|Відмовитися| S08O
 
-    S08O -->|Tell the truth| S10S["10S. An Apartment for Our Daughter"]
-    S08O -->|End the interview| S10S
-    S08O -->|Lie about age| S09O["09O. A Passport Does Not Lie"]
-    S09O -->|Lose UAH 2,000| S10S
+    S08O -->|Сказати правду| S10S["10S. Квартира для доньки"]
+    S08O -->|Завершити співбесіду| S10S
+    S08O -->|Збрехати про вік| S09O["09O. Паспорт не бреше"]
+    S09O -->|Втрата 2 000 грн| S10S
 
-    S10S -->|Transfer UAH 5,000| F3(["F3. A Deposit into Nowhere"])
-    S10S -->|Verify or block| S11N["11N. Without the Word ‘Urgent’"]
+    S10S -->|Переказати 5 000 грн| F3(["F3. Завдаток у нікуди"])
+    S10S -->|Перевірити або заблокувати| S11N["11N. Без слова «терміново»"]
 
-    S11N -->|Budget below UAH 19,500| F9(["F9. Back to the Dormitory"])
-    S11N -->|Budget of at least UAH 19,500| S12N["12N. An Ordinary Apartment"]
+    S11N -->|Бюджет менше 19 500 грн| F9(["F9. Назад у гуртожиток"])
+    S11N -->|Бюджет від 19 500 грн| S12N["12N. Звичайна квартира"]
 
-    S12N -->|Full inspection| S13N["13N. Nineteen and a Half"]
-    S12N -->|Pay immediately| F5(["F5. Keys Before the Checklist"])
-    S12N -->|Refuse| F9
+    S12N -->|Повна перевірка| S13N["13N. Дев’ятнадцять з половиною"]
+    S12N -->|Одразу оплатити| F5(["F5. Ключі швидше за чекліст"])
+    S12N -->|Відмовитися| F9
 
-    S13N -->|Clarify the handover report and sign| F4(["F4. Ordinary, but Yours"])
-    S13N -->|Sign without clarifications| F5
-    S13N -->|Refuse| F9
+    S13N -->|Уточнити акт і підписати| F4(["F4. Звичайна, зате ваша"])
+    S13N -->|Підписати без уточнень| F5
+    S13N -->|Відмовитися| F9
 
-    CHECK{"Check after every<br/>non-final choice"}
-    CHECK -->|Olia ≤ 30| F6(["F6. Olia Searches Alone"])
-    CHECK -->|Maks ≤ 30| F7(["F7. Maks Budgets for One"])
-    CHECK -->|Stress ≥ 60 or both ≤ 30| F8(["F8. Three Separate Ways"])
+    CHECK{"Контроль після кожного\nнефінального вибору"}
+    CHECK -->|Оля ≤ 30| F6(["F6. Оля шукає сама"])
+    CHECK -->|Макс ≤ 30| F7(["F7. Макс рахує на одного"])
+    CHECK -->|Стрес ≥ 60 або обоє ≤ 30| F8(["F8. Троє в різні боки"])
 
     S02 -.-> CHECK
     S03 -.-> CHECK
@@ -215,773 +215,773 @@ flowchart TD
     S12N -.-> CHECK
 ```
 
-Solid arrows show the main story route. Dotted arrows represent checks of hidden parameters after a non-final choice. They interrupt the main route only when one of the threshold conditions is met.
+Суцільні стрілки показують основний сюжетний маршрут. Пунктирні стрілки означають перевірку прихованих параметрів після нефінального вибору; вона перериває основний маршрут лише тоді, коли спрацьовує одна з порогових умов.
 
-## 5. Full scenario
+## 5. Повний сценарій
 
-#### Scene 01. Notice on the Door
+#### Сцена 01. Оголошення на дверях
 
-**Location:** room in a student dormitory.  
-**Time:** Monday, 7:10 p.m.  
-**Participants:** Marta, Olia, Maks, dormitory supervisor.  
-**Prerequisite:** beginning of the story.
+**Локація:** кімната в студентському гуртожитку.  
+**Час:** понеділок, 19:10.  
+**Учасники:** Марта, Оля, Макс, комендантка.  
+**Передумова:** початок історії.
 
-**Scene description:**  
-The corridor lights go out. Under an emergency lamp, the dormitory supervisor tapes a notice to the door: the building is closing for renovations, and the residents must move out by the end of the week. Everyone is offered a place in another dormitory—four people to a room, far from the university buildings.
+**Опис сцени:**  
+У коридорі зникає світло. Під аварійною лампою комендантка приклеює до дверей оголошення: корпус закривають на ремонт, мешканці мають виселитися до кінця тижня. Усім пропонують місця в іншому гуртожитку — по четверо в кімнаті, далеко від корпусів університету.
 
-**Dialogue:**
+**Діалог:**
 
-**Dormitory supervisor:** Hand in your keys by Sunday. Anyone who accepts the relocation should submit an application tomorrow.
+**Комендантка:** До неділі здаєте ключі. Хто погоджується на переселення — завтра пише заяву.
 
-**Olia:** Am I supposed to attend online classes from the top bunk above three other people?
+**Оля:** А онлайн-пари я проводитиму з верхнього ліжка над трьома людьми?
 
-**Dormitory supervisor:** That is an organizational matter.
+**Комендантка:** Це вже організаційне питання.
 
-**Maks:** I love phrases that suddenly turn every problem into your problem.
+**Макс:** Люблю фрази, після яких усі проблеми раптом стають твоїми.
 
-**Marta:** We have five days. Either we relocate, or we look for an apartment together.
+**Марта:** У нас п’ять днів. Або переселення, або шукаємо квартиру разом.
 
-**Olia:** I’m in favor of an apartment. But I need my own room and reliable internet.
+**Оля:** Я за квартиру. Але мені потрібна окрема кімната й нормальний інтернет.
 
-**Maks:** And I need a price that still leaves enough money for food.
+**Макс:** А мені потрібна ціна, після якої ще можна купити їжу.
 
-**Marta:** Then tonight we calculate our money and agree on what is non-negotiable for each of us.
+**Марта:** Тоді сьогодні рахуємо гроші й домовляємося, що для кожного критично.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** the friends sit at the table, open their banking apps, and pool their available funds → proceed to Scene `02`.
+- **Лінійна дія:** друзі сідають за стіл, відкривають банківські застосунки й складають спільний резерв → перехід до сцени `02`.
 
-**Consequence:**  
-The deadline and starting budget are established: UAH 20,000. Stress +5.
+**Наслідок:**  
+Встановлено дедлайн і стартовий бюджет — 20 000 грн. Стрес +5.
 
-**Next scene:** `02. Three People, Three Lists`.
+**Наступна сцена:** `02. Три людини — три списки`.
 
-#### Scene 02. Three People, Three Lists
+#### Сцена 02. Три людини — три списки
 
-**Location:** dormitory kitchen.  
-**Time:** later that evening, 8:00 p.m.  
-**Participants:** Marta, Olia, Maks.  
-**Prerequisite:** follows Scene `01`, after the decision to search for an apartment together.
+**Локація:** кухня гуртожитку.  
+**Час:** того ж вечора, 20:00.  
+**Учасники:** Марта, Оля, Макс.  
+**Передумова:** зі сцени `01`, після рішення шукати квартиру разом.
 
-**Scene description:**  
-Three sheets of paper lie on the table. Olia’s reads “private room, internet, bathtub, shelter.” Maks’s says “up to 15,000, no unnecessary charges.” Marta opens a map of Kyiv and tries to turn three lists into one.
+**Опис сцени:**  
+На столі лежать три аркуші. В Олі — «окрема кімната, інтернет, ванна, укриття». У Макса — «до 15 000, без зайвих платежів». Марта відкриває карту Києва й намагається скласти один список замість трьох.
 
-**Dialogue:**
+**Діалог:**
 
-**Olia:** I work from home. If my room is a passage room, both of you will learn every detail of my work calls.
+**Оля:** Я працюю з дому. Якщо моя кімната прохідна, ви обоє вивчите всі мої робочі дзвінки.
 
-**Maks:** And if the apartment is expensive, all three of us will learn what plain buckwheat tastes like.
+**Макс:** А якщо квартира буде дорога, ми всі вивчимо смак гречки без нічого.
 
-**Marta:** We have twenty thousand to start. Not for our dream home—for the actual initial payment and transport.
+**Марта:** У нас є двадцять тисяч на старт. Не на мрії, а на реальний перший платіж і дорогу.
 
-**Olia:** I’m willing to compromise on the neighborhood. I’m not willing to compromise on safety or a door.
+**Оля:** Я готова поступитися районом. Не готова поступитися безпекою й дверима.
 
-**Maks:** I can accept an old renovation. I won’t pay extra for the word “loft.”
+**Макс:** Я готовий на старий ремонт. Не готовий платити за слово «лофт».
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** “We establish the minimum: private rooms, a safe building, written terms, and the full amount disclosed before we travel anywhere” → Olia +5, Maks +5, stress −3 → control check → Scene `03`.
-- **Option B:** “We look at the cheapest options first and work out the comfort issues somehow” → Olia −8, Maks +5, stress +5 → control check → Scene `03`.
-- **Option C:** “We look for the best conditions first and work out the money somehow later” → Olia +5, Maks −8, stress +5 → control check → Scene `03`.
+- **Варіант А:** «Фіксуємо мінімум: окремі кімнати, безпечний будинок, письмові умови й повна сума до виїзду» → Оля +5, Макс +5, стрес −3 → контрольна перевірка → сцена `03`.
+- **Варіант Б:** «Спершу дивимося найдешевше, а комфорт якось владнаємо» → Оля −8, Макс +5, стрес +5 → контрольна перевірка → сцена `03`.
+- **Варіант В:** «Спершу дивимося найкращі умови, потім якось домовимося про гроші» → Оля +5, Макс −8, стрес +5 → контрольна перевірка → сцена `03`.
 
-**Consequence:**  
-Marta’s initial position is established. It will affect whether her friends trust her later arguments.
+**Наслідок:**  
+Формується початкова позиція Марти. Вона впливатиме на те, чи повірять друзі її подальшим аргументам.
 
-**Next scene:** `03. Photos That Do Not Exist`.
+**Наступна сцена:** `03. Фото, яких не існує`.
 
-#### Scene 03. Photos That Do Not Exist
+#### Сцена 03. Фото, яких не існує
 
-**Location:** apartment-listing website interface on a laptop.  
-**Time:** Tuesday, 8:15 a.m.  
-**Participants:** Marta, Olia, Maks.  
-**Prerequisite:** follows Scene `02`, after the group either agrees or fails to agree on shared criteria.
+**Локація:** інтерфейс сайту оголошень на ноутбуці.  
+**Час:** вівторок, 08:15.  
+**Учасники:** Марта, Оля, Макс.  
+**Передумова:** зі сцени `02` після погодження або непогодження спільних критеріїв.
 
-**Scene description:**  
-The screen shows a bright three-bedroom apartment near the city center for UAH 10,000. The caption reads: “urgent, owner abroad, renovated for our daughter.” The windows and flooring do not match across the photos. The contact is a realtor named Larysa.
+**Опис сцени:**  
+На екрані — світла трикімнатна квартира біля центру за 10 000 грн. У підписі: «терміново, власник за кордоном, зробили ремонт для доньки». На різних фото не збігаються вікна й підлога. Контакт — рієлторка Лариса.
 
-**Dialogue:**
+**Діалог:**
 
-**Maks:** Ten thousand. Either it’s a miracle, or these photos are older than we are.
+**Макс:** Десять тисяч. Або це диво, або фотографії старші за нас.
 
-**Olia:** The kitchen is white in the second photo and green in the fourth.
+**Оля:** На другому фото кухня біла, на четвертому — зелена.
 
-**Marta:** We can call and check. But we don’t promise anything.
+**Марта:** Можемо подзвонити й перевірити. Але нічого не обіцяємо.
 
-**Maks:** That is exactly how everyone meets their problems.
+**Макс:** Саме так усі й знайомляться з проблемами.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** call Larysa → set `larysa_contact` → stress +4 → control check → Scene `04L`.
-- **Option B:** close the suspicious listing and continue searching → Olia +2, Maks −2, stress −1 → control check → Scene `06I`.
+- **Варіант А:** подзвонити Ларисі → встановити `larysa_contact` → стрес +4 → контрольна перевірка → сцена `04L`.
+- **Варіант Б:** закрити підозріле оголошення й шукати далі → Оля +2, Макс −2, стрес −1 → контрольна перевірка → сцена `06I`.
 
-**Consequence:**  
-If Marta calls, Larysa obtains her number and will continue reminding the group about herself.
+**Наслідок:**  
+Якщо Марта телефонує, Лариса отримує її номер і надалі регулярно нагадує про себе.
 
-**Next scene:** `04L. The Apartment Is Already Taken` or `06I. A Viewing Means Agreement`.
+**Наступна сцена:** `04L. Квартира вже зайнята` або `06I. Перегляд означає згоду`.
 
-#### Scene 04L. The Apartment Is Already Taken
+#### Сцена 04L. Квартира вже зайнята
 
-**Location:** phone call; split screen.  
-**Time:** Tuesday, 8:20 a.m.  
-**Participants:** Marta, Larysa, Olia, Maks.  
-**Prerequisite:** follows Scene `03` if Marta called about the suspicious listing.
+**Локація:** телефонна розмова; розділений екран.  
+**Час:** вівторок, 08:20.  
+**Учасники:** Марта, Лариса, Оля, Макс.  
+**Передумова:** зі сцени `03`, якщо Марта подзвонила за підозрілим оголошенням.
 
-**Scene description:**  
-Larysa answers before the second ring. She immediately says that the apartment in the photos is no longer available, but she has “an even better one” in Lukianivka. The building was damaged in an attack, the apartment is on the fifteenth floor, and the elevator is unreliable. The rent is UAH 10,000, and Larysa’s commission is 75%.
+**Опис сцени:**  
+Лариса відповідає ще до другого гудка. Вона одразу повідомляє, що квартири з фото вже немає, але має «ще кращу» на Лук’янівці. Будинок пошкоджений під час атаки, квартира на п’ятнадцятому поверсі, ліфт працює не завжди. Оренда — 10 000 грн, комісія Лариси — 75%.
 
-**Dialogue:**
+**Діалог:**
 
-**Larysa:** Your timing is excellent, but that exact apartment has already been taken. Literally a minute ago.
+**Лариса:** Ви дуже вчасно, але саме цю вже забрали. Буквально хвилину тому.
 
-**Marta:** The listing was posted ten minutes ago.
+**Марта:** Оголошення опублікували десять хвилин тому.
 
-**Larysa:** The Kyiv market moves fast. But I have a unique option in Lukianivka. A view from the fifteenth floor, a bathtub, plenty of space.
+**Лариса:** Київський ринок швидкий. Зате є унікальний варіант на Лук’янівці. Вид із п’ятнадцятого поверху, ванна, простір.
 
-**Olia:** What happened to the building?
+**Оля:** А що з будинком?
 
-**Larysa:** The facade has certain cosmetic features. The third entrance was hit, but the apartment is in the second.
+**Лариса:** Є косметичні особливості фасаду. У третьому під’їзді був приліт, але квартира в другому.
 
-**Maks:** What is the full move-in cost?
+**Макс:** Скільки все разом при заселенні?
 
-**Larysa:** Seventeen and a half thousand now. The owner will let you pay the rest of the deposit later. I can pick you up in twenty minutes.
+**Лариса:** Сімнадцять з половиною зараз. Решту застави власник дозволяє потім. Я можу під’їхати машиною за двадцять хвилин.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** agree to the viewing → Olia −3, Maks +3, stress +6 → control check → Scene `05L`.
-- **Option B:** say that the bait-and-switch listing and damaged building are unacceptable, then end the call → Olia +4, Maks −3, stress −2 → control check → Scene `06I`.
+- **Варіант А:** погодитися на перегляд → Оля −3, Макс +3, стрес +6 → контрольна перевірка → сцена `05L`.
+- **Варіант Б:** відповісти, що підміна оголошення й пошкоджений будинок не підходять, та завершити дзвінок → Оля +4, Макс −3, стрес −2 → контрольна перевірка → сцена `06I`.
 
-**Consequence:**  
-If the player refuses, Larysa will continue sending voice messages between later scenes. They do not change the route, but they intensify the sense of pressure.
+**Наслідок:**  
+Якщо гравець відмовляється, Лариса все одно надсилатиме голосові повідомлення між наступними сценами. Вони не змінюють маршрут, але додають відчуття тиску.
 
-**Next scene:** `05L. Installation Art on the Fifteenth Floor` or `06I. A Viewing Means Agreement`.
+**Наступна сцена:** `05L. Артоб’єкт на п’ятнадцятому` або `06I. Перегляд означає згоду`.
 
-#### Scene 05L. Installation Art on the Fifteenth Floor
+#### Сцена 05L. Артоб’єкт на п’ятнадцятому
 
-**Location:** damaged high-rise in Lukianivka; apartment.  
-**Time:** Tuesday, 9:05 a.m.  
-**Participants:** Marta, Olia, Maks, Larysa.  
-**Prerequisite:** follows Scene `04L` if the friends agree to the viewing.
+**Локація:** пошкоджена багатоповерхівка на Лук’янівці; квартира.  
+**Час:** вівторок, 09:05.  
+**Учасники:** Марта, Оля, Макс, Лариса.  
+**Передумова:** зі сцени `04L`, якщо друзі погодилися на перегляд.
 
-**Scene description:**  
-Part of the courtyard is closed off, and the facade of the neighboring entrance is visibly damaged. The elevator only reaches the twelfth floor. The apartment has three rooms, but one is a passage room. An old bathtub stands in the bathroom, with a puddle beneath it and a dark stain on the wall. The nearest shelter is ten minutes away.
+**Опис сцени:**  
+Біля входу видно закриту частину двору й пошкоджений фасад сусіднього під’їзду. Ліфт доїжджає лише до дванадцятого поверху. У квартирі три кімнати, але одна прохідна. У ванній стоїть стара ванна, під нею калюжа, на стіні темна пляма. Найближче укриття — за десять хвилин.
 
-**Dialogue:**
+**Діалог:**
 
-**Larysa:** At least no one will stomp around above you. And with a view like this, every defect becomes a concept.
+**Лариса:** Зате зверху ніхто не тупає. І краєвид такий, що всі недоліки стають концепцією.
 
-**Olia:** Is the water under the bathtub a concept too?
+**Оля:** Вода під ванною — теж концепція?
 
-**Larysa:** That’s from the cleaning. It will dry.
+**Лариса:** Це після прибирання. Просохне.
 
-**Maks:** Ten thousand for three rooms. We could call a repair person.
+**Макс:** Десять тисяч за три кімнати. Ми можемо викликати майстра.
 
-**Olia:** We’re on the fifteenth floor of a damaged building with an unreliable elevator and no proper shelter.
+**Оля:** Ми на п’ятнадцятому поверсі в будинку з пошкодженням, без стабільного ліфта й нормального укриття.
 
-**Larysa:** Young people, you either see opportunities or you see a puddle.
+**Лариса:** Молоді люди, ви або бачите можливості, або бачите калюжу.
 
-**Olia:** I see a puddle because it is literally under my feet.
+**Оля:** Я бачу калюжу, бо вона буквально під ногами.
 
-**Maks:** At least there is a bathtub. Olia wanted a bathtub.
+**Макс:** Ванна хоча б є. Оля ж хотіла ванну.
 
-**Marta:** The bathtub isn’t the issue. The issue is how many risks we are currently calling a low price.
+**Марта:** Питання не у ванні. Питання в тому, скільки ризиків ми зараз називаємо низькою ціною.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** “We’ll take it. We won’t find anything better at this price” → Maks +7, Olia −12, stress +15, budget −UAH 17,500 → proceed to ending `F1`.
-- **Option B:** “Olia, you’re right: safety matters more. We’re refusing” → Olia +7, Maks −6, stress −2 → control check → Scene `06I`.
-- **Option C:** demand a damage report, repairs to the leak, and written information about the building’s condition; leave when Larysa refuses → Olia +4, Maks +3, stress −5 → control check → Scene `06I`.
+- **Варіант А:** «Беремо. За таку ціну кращого не буде» → Макс +7, Оля −12, стрес +15, бюджет −17 500 грн → перехід до фіналу `F1`.
+- **Варіант Б:** «Олю, ти права: безпека важливіша. Відмовляємося» → Оля +7, Макс −6, стрес −2 → контрольна перевірка → сцена `06I`.
+- **Варіант В:** вимагати акт про пошкодження, ремонт протікання й письмову інформацію про стан будинку; після відмови Лариси піти → Оля +4, Макс +3, стрес −5 → контрольна перевірка → сцена `06I`.
 
-**Consequence:**  
-Renting the apartment ends the search with a bad, though non-fraudulent, outcome. Refusing preserves the money, but Larysa continues calling.
+**Наслідок:**  
+Оренда завершує пошук поганим, але не шахрайським фіналом. Відмова зберігає гроші, однак Лариса продовжує телефонувати.
 
-**Next scene:** `F1. Larysa’s Gem` or `06I. A Viewing Means Agreement`.
+**Наступна сцена:** `F1. Ларисина перлина` або `06I. Перегляд означає згоду`.
 
-#### Scene 06I. A Viewing Means Agreement
+#### Сцена 06I. Перегляд означає згоду
 
-**Location:** university corridor; phone screen.  
-**Time:** Wednesday, 12:40 p.m.  
-**Participants:** Marta, Olia, Maks; Larysa in voice messages.  
-**Prerequisite:** follows the rejection of Larysa or the decision to ignore her listing.
+**Локація:** коридор університету; екран телефона.  
+**Час:** середа, 12:40.  
+**Учасники:** Марта, Оля, Макс, Лариса у голосових повідомленнях.  
+**Передумова:** після відмови Ларисі або після ігнорування її оголошення.
 
-**Scene description:**  
-Marta finds a three-bedroom apartment near Vasylkivska for UAH 12,000. The photos are imperfect but consistent with one another. The listing specifies a 50% commission. The realtor, Ihnat, sends a video and writes, “Watch carefully so we can complete the paperwork when you arrive.” If `larysa_contact` is active, Larysa’s message appears over the screen: “I found another gem for you. Call me back.”
+**Опис сцени:**  
+Марта знаходить трикімнатну квартиру біля Васильківської за 12 000 грн. Фото неідеальні, але схожі між собою. У картці вказано комісію 50%. Рієлтор Ігнат надсилає відео й пише: «Дивіться уважно, щоб на місці вже оформляти». Якщо активний прапорець `larysa_contact`, поверх екрана з’являється її повідомлення: «Я вам ще одну перлину знайшла, передзвоніть».
 
-**Dialogue:**
+**Діалог:**
 
-**Maks:** Twelve thousand plus half as commission makes eighteen. We can afford that.
+**Макс:** Дванадцять плюс половина комісії — вісімнадцять. Ми вкладаємося.
 
-**Olia:** It looks clean in the photos. And there are three doors. Progress already.
+**Оля:** На фото чисто. І три двері. Уже прогрес.
 
-**Marta:** The only thing that bothers me is “complete the paperwork when you arrive.”
+**Марта:** Мене бентежить тільки фраза «на місці вже оформляти».
 
-**Maks:** We can view it without signing anything.
+**Макс:** Можемо подивитися й нічого не підписувати.
 
-**Olia:** Say that again before we go inside, so we all remember.
+**Оля:** Скажи це ще раз перед дверима, щоб ми всі запам’ятали.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** agree to a viewing, but clarify in writing that the decision will be made only after reading the contract → Maks +3, Olia +2, stress +3 → control check → Scene `07I`.
-- **Option B:** skip the apartment because of the pressure before even meeting → Maks −5, Olia +2, stress −2 → control check → Scene `08O`.
+- **Варіант А:** погодитися на перегляд, але письмово уточнити, що рішення буде після читання договору → Макс +3, Оля +2, стрес +3 → контрольна перевірка → сцена `07I`.
+- **Варіант Б:** пропустити квартиру через тиск ще до зустрічі → Макс −5, Оля +2, стрес −2 → контрольна перевірка → сцена `08O`.
 
-**Consequence:**  
-Ihnat replies to the clarification with an “OK” emoji, but will behave as though the deal has already been agreed.
+**Наслідок:**  
+Ігнат відповідає на уточнення емодзі «ок», але поводитиметься так, ніби угода вже погоджена.
 
-**Next scene:** `07I. A Contract in Translation` or `08O. A Good Apartment for Grown-Ups`.
+**Наступна сцена:** `07I. Договір із перекладом` або `08O. Хороша квартира для дорослих`.
 
-#### Scene 07I. A Contract in Translation
+#### Сцена 07I. Договір із перекладом
 
-**Location:** apartment near Vasylkivska.  
-**Time:** Wednesday, 6:00 p.m.  
-**Participants:** Marta, Olia, Maks, Ihnat.  
-**Prerequisite:** follows Scene `06I` if the friends agree to the viewing.
+**Локація:** квартира біля Васильківської.  
+**Час:** середа, 18:00.  
+**Учасники:** Марта, Оля, Макс, Ігнат.  
+**Передумова:** зі сцени `06I`, якщо друзі погодилися на перегляд.
 
-**Scene description:**  
-The apartment is genuinely decent: old but clean renovation, three separate rooms, and the metro nearby. Ihnat immediately produces the contract. The text reads like a poor machine translation: sentences trail off, and the security-deposit amount appears twice with different figures. Ihnat verbally adds a mandatory UAH 5,000 move-out cleaning fee and says that the owner may inspect the apartment without a clear notice period. Neither condition appears in the contract.
+**Опис сцени:**  
+Квартира справді непогана: старий, але чистий ремонт, три окремі кімнати, поруч метро. Ігнат одразу дістає договір. Текст схожий на невдалий машинний переклад: речення обриваються, сума застави згадана двічі по-різному. Усно Ігнат додає обов’язкове прибирання після виїзду за 5 000 грн і можливість власника переглядати квартиру без чіткого попередження. У договорі цього немає.
 
-**Dialogue:**
+**Діалог:**
 
-**Ihnat:** Well, it’s exactly like the video. I thought you were coming to complete the paperwork.
+**Ігнат:** Ну що, все як на відео. Я думав, ви вже приїхали оформляти.
 
-**Marta:** We wrote that we would decide after reading the contract.
+**Марта:** Ми писали, що рішення буде після договору.
 
-**Ihnat:** Of course. Read it, but I have another group arriving in forty minutes.
+**Ігнат:** Та звісно. Читайте, тільки в мене наступні люди за сорок хвилин.
 
-**Olia:** This says, “tenant is obliged return of property in condition of original occurrence.”
+**Оля:** Тут написано: «наймач зобов’язаний повернення майна в стані первинного виникнення».
 
-**Maks:** Maybe it’s legal poetry.
+**Макс:** Може, це юридична поезія.
 
-**Marta:** Where does it mention the five-thousand-hryvnia cleaning fee?
+**Марта:** Де вказане прибирання за п’ять тисяч?
 
-**Ihnat:** It’s a standard condition. Everyone knows about it. I see no reason to bloat the contract.
+**Ігнат:** Це стандартна умова, її всі знають. Не бачу сенсу роздувати договір.
 
-**Olia:** And the owner’s visits?
+**Оля:** А візити власника?
 
-**Ihnat:** If you live properly, what is there to be afraid of?
+**Ігнат:** Якщо ви нормально живете, чого вам боятися?
 
-**Maks:** The apartment itself is fine. Could we just ask them to correct the text?
+**Макс:** Сама квартира нормальна. Може, просто попросимо виправити текст?
 
-**Ihnat:** No one is rewriting the template. Either you take it, or we stop wasting one another’s time.
+**Ігнат:** Переробляти шаблон ніхто не буде. Або беремо, або не затримуємо одне одного.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** sign the contract as written to avoid losing the apartment → Maks +5, Olia −9, stress +12, budget −UAH 18,000 → proceed to ending `F2`.
-- **Option B:** insist on adding every charge, the rules for visits, and the deposit-return procedure; leave after Ihnat refuses → Olia +5, Maks +2, stress +2, set `contract_checked` → control check → Scene `08O`.
-- **Option C:** tell Olia she is nitpicking, but still refuse because of the additional UAH 5,000 → Olia −10, Maks +3, stress +8 → control check → Scene `08O`.
+- **Варіант А:** підписати договір як є, щоб не втратити квартиру → Макс +5, Оля −9, стрес +12, бюджет −18 000 грн → перехід до фіналу `F2`.
+- **Варіант Б:** вимагати вписати всі платежі, порядок візитів і повернення застави; після відмови піти → Оля +5, Макс +2, стрес +2, встановити `contract_checked` → контрольна перевірка → сцена `08O`.
+- **Варіант В:** сказати Олі, що вона чіпляється до слів, але все одно відмовитися через додаткові 5 000 грн → Оля −10, Макс +3, стрес +8 → контрольна перевірка → сцена `08O`.
 
-**Consequence:**  
-Signing ends the search with an apartment that carries hidden future costs. Refusing preserves the budget and opens the next offer.
+**Наслідок:**  
+Підписання завершує пошук квартирою з прихованими майбутніми витратами. Відмова зберігає бюджет і відкриває наступну пропозицію.
 
-**Next scene:** `F2. The Contract That Wrote Itself` or `08O. A Good Apartment for Grown-Ups`.
+**Наступна сцена:** `F2. Договір, який дописав себе` або `08O. Хороша квартира для дорослих`.
 
-#### Scene 08O. A Good Apartment for Grown-Ups
+#### Сцена 08O. Хороша квартира для дорослих
 
-**Location:** dormitory kitchen; phone call.  
-**Time:** Thursday, 9:30 a.m.  
-**Participants:** Marta, Olia, Maks, Oksana.  
-**Prerequisite:** follows the rejection of Ihnat or the decision to skip his listing.
+**Локація:** кухня гуртожитку; телефонна розмова.  
+**Час:** четвер, 09:30.  
+**Учасники:** Марта, Оля, Макс, Оксана.  
+**Передумова:** після відмови від Ігната або пропуску його оголошення.
 
-**Scene description:**  
-A new owner listing appears: a tidy three-bedroom apartment in Syrets for UAH 15,000, with no commission. Oksana warmly describes the renovation, then moves on to questions about age, employment, and the friends’ parents. The group listens silently on speakerphone.
+**Опис сцени:**  
+З’являється свіже оголошення від власниці: охайна трикімнатна квартира на Сирці, 15 000 грн, без комісії. Оксана привітно описує ремонт, а потім переходить до запитань про вік, роботу й батьків. Друзі мовчки слухають розмову на гучному зв’язку.
 
-**Dialogue:**
+**Діалог:**
 
-**Oksana:** The apartment has just been renovated, and the appliances are new. May I ask how old you are?
+**Оксана:** Квартира після ремонту, техніка нова. Скажіть, будь ласка, скільки вам років?
 
-**Marta:** We’re twenty-one and twenty-two.
+**Марта:** Нам двадцять один-двадцять два.
 
-**Oksana:** Do you work, or do you only study?
+**Оксана:** Ви працюєте чи тільки вчитеся?
 
-**Maks** *(whispering):* We work and study. That is literally true.
+**Макс** *(пошепки):* І працюємо, і вчимося. Це буквально правда.
 
-**Oksana:** I simply don’t want children when it isn’t clear who will pay for them. I need people who are at least twenty-seven and have stable jobs.
+**Оксана:** Я просто не хочу дітей, за яких незрозуміло хто платитиме. Мені потрібні люди хоча б від двадцяти семи, зі стабільною роботою.
 
-**Olia** *(whispering):* If we already don’t qualify, there is no point trying to persuade her.
+**Оля** *(пошепки):* Якщо їй уже не підходимо, не треба вмовляти.
 
-**Maks** *(whispering):* It’s a good apartment with no commission. We could say we’re all twenty-seven.
+**Макс** *(пошепки):* Квартира хороша й без комісії. Можна сказати, що нам по двадцять сім.
 
-**Marta:** Oksana, I understand.
+**Марта:** Оксано, я вас почула.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** honestly state their ages, jobs, and studies → Oksana refuses; Olia +3, Maks −2, stress +5 → control check → Scene `10S`.
-- **Option B:** say that they are all twenty-seven and work full-time → Maks +4, Olia −7, stress +6, set `lied_to_oksana` → control check → Scene `09O`.
-- **Option C:** refuse to answer questions about their parents and end the conversation → Olia +5, Maks −4, stress −1 → control check → Scene `10S`.
+- **Варіант А:** чесно назвати вік, роботу й навчання → Оксана відмовляє; Оля +3, Макс −2, стрес +5 → контрольна перевірка → сцена `10S`.
+- **Варіант Б:** сказати, що всім по двадцять сім і всі працюють повний день → Макс +4, Оля −7, стрес +6, встановити `lied_to_oksana` → контрольна перевірка → сцена `09O`.
+- **Варіант В:** відмовитися відповідати на питання про батьків і завершити розмову → Оля +5, Макс −4, стрес −1 → контрольна перевірка → сцена `10S`.
 
-**Consequence:**  
-An honest answer or firm boundary closes the offer without financial loss. The lie opens a short branch in which it is guaranteed to be exposed.
+**Наслідок:**  
+Чесна відповідь або встановлення меж закриває цю пропозицію без фінансових втрат. Брехня відкриває коротку гілку з гарантованим викриттям.
 
-**Next scene:** `09O. A Passport Does Not Lie` or `10S. An Apartment for Our Daughter`.
+**Наступна сцена:** `09O. Паспорт не бреше` або `10S. Квартира для доньки`.
 
-#### Scene 09O. A Passport Does Not Lie
+#### Сцена 09O. Паспорт не бреше
 
-**Location:** taxi; then Oksana’s apartment in Syrets.  
-**Time:** Thursday, 10:20 a.m.  
-**Participants:** Marta, Olia, Maks, Oksana.  
-**Prerequisite:** follows Scene `08O` if Marta lied about their ages and employment.
+**Локація:** таксі; потім квартира Оксани на Сирці.  
+**Час:** четвер, 10:20.  
+**Учасники:** Марта, Оля, Макс, Оксана.  
+**Передумова:** зі сцени `08O`, якщо Марта збрехала про вік і зайнятість.
 
-**Scene description:**  
-Oksana demands that they arrive as quickly as possible. The friends take a taxi during rush hour because they are afraid someone else will get the apartment. The return journey costs UAH 2,000. The apartment really is good. At the table, Oksana asks for their passports so she can prepare the contract.
+**Опис сцени:**  
+Оксана вимагає приїхати якнайшвидше. Друзі беруть таксі в годину пік, бо бояться, що квартира дістанеться іншим. Дорога туди й назад коштує 2 000 грн. Квартира справді хороша. Біля столу Оксана просить паспорти для договору.
 
-**Dialogue:**
+**Діалог:**
 
-**Oksana:** Finally, people I can speak to seriously. Give me your documents, and I’ll copy the details.
+**Оксана:** Нарешті люди, з якими можна говорити серйозно. Давайте документи, я перепишу дані.
 
-**Marta:** Could we read the contract first?
+**Марта:** Можемо спершу прочитати договір?
 
-**Oksana:** Of course. Give me the passports while you read.
+**Оксана:** Звісно. Паспорт дайте, поки ви читаєте.
 
-**Olia:** Marta, this is where it ends.
+**Оля:** Марто, це зараз і закінчиться.
 
-**Maks:** Maybe she won’t look at the date.
+**Макс:** Може, вона не дивитиметься на дату.
 
-**Oksana:** Twenty-one? You said twenty-seven.
+**Оксана:** Двадцять один? Ви ж сказали — двадцять сім.
 
-**Marta:** We were afraid you wouldn’t even give us a chance.
+**Марта:** Ми боялися, що ви навіть не дасте нам шансу.
 
-**Oksana:** After a lie, there is certainly no chance. Please leave.
+**Оксана:** Після брехні шансів точно немає. Прошу вийти.
 
-**Maks:** Two thousand hryvnias for a tour of a nice apartment.
+**Макс:** Дві тисячі за екскурсію гарною квартирою.
 
-**Olia:** The apartment didn’t deceive us. We were the ones who decided the lie would work.
+**Оля:** Не квартира нас обдурила. Ми самі вирішили, що брехня спрацює.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** the friends leave the apartment and return to the dormitory → budget −UAH 2,000, Olia −3, Maks −3, stress +12 → control check → Scene `10S`.
+- **Лінійна дія:** друзі залишають квартиру й повертаються до гуртожитку → бюджет −2 000 грн, Оля −3, Макс −3, стрес +12 → контрольна перевірка → сцена `10S`.
 
-**Consequence:**  
-The budget falls to UAH 18,000. As a result, the final apartment will be unaffordable even if the group reaches it.
+**Наслідок:**  
+Бюджет зменшується до 18 000 грн. Через це фінальна квартира стане недоступною, навіть якщо команда дійде до неї.
 
-**Next scene:** `10S. An Apartment for Our Daughter`.
+**Наступна сцена:** `10S. Квартира для доньки`.
 
-#### Scene 10S. An Apartment for Our Daughter
+#### Сцена 10S. Квартира для доньки
 
-**Location:** group chat and Viber on Marta’s phone.  
-**Time:** Thursday, 9:15 p.m.  
-**Participants:** Marta, Olia, Maks, “the Viber owner.”  
-**Prerequisite:** follows the conclusion of Oksana’s branch.
+**Локація:** груповий чат і Viber на телефоні Марти.  
+**Час:** четвер, 21:15.  
+**Учасники:** Марта, Оля, Макс, «власниця з Viber».  
+**Передумова:** після завершення гілки Оксани.
 
-**Scene description:**  
-That evening, Marta sees a listing for a modern three-bedroom apartment in Podil for UAH 10,000. The “owner” says that she and her husband renovated it for their daughter, who then moved abroad. After a few friendly messages, the woman asks for UAH 5,000 to reserve the apartment until tomorrow’s viewing. She sends a photograph of a passport but refuses a video call.
+**Опис сцени:**  
+Увечері Марта бачить оголошення: сучасна трикімнатна квартира на Подолі за 10 000 грн. «Власниця» пише, що ремонт робили для доньки, але та виїхала за кордон. Після кількох доброзичливих повідомлень жінка просить 5 000 грн, щоб забронювати квартиру до завтрашнього перегляду. Надсилає фото паспорта, але відмовляється від відеодзвінка.
 
-**Dialogue:**
+**Діалог:**
 
-**The Viber owner:** My husband and I discussed it. You seem like very good people.
+**Власниця з Viber:** Ми з чоловіком порадилися. Ви справляєте враження дуже хороших людей.
 
-**Maks:** She learned that from three messages?
+**Макс:** Вона це зрозуміла з трьох повідомлень?
 
-**The Viber owner:** I’m prepared to turn the others down. Transfer five thousand to reserve it, and I’ll remove the listing immediately.
+**Власниця з Viber:** Я готова відмовити іншим. Перекиньте п’ять тисяч бронювання, і оголошення одразу видаляю.
 
-**Olia:** Ask her to show the apartment live. At least the view from the window.
+**Оля:** Попроси показати квартиру наживо. Хоча б відео з вікна.
 
-**Marta:** She says she’s in the countryside and the connection is poor.
+**Марта:** Вона каже, що зараз у селі й зв’язок слабкий.
 
-**Maks:** A passport photo proves nothing. It could belong to anyone.
+**Макс:** Фото паспорта нічого не доводить. Воно може бути чиє завгодно.
 
-**The Viber owner:** Decide within ten minutes. Other people are already prepared to pay.
+**Власниця з Viber:** Вирішіть за десять хвилин, бо люди вже готові платити.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** transfer UAH 5,000 to avoid losing a cheap apartment → budget −UAH 5,000, stress +20 → proceed to ending `F3`.
-- **Option B:** request a video call from the apartment, proof of ownership, and the card recipient’s name → the contact deletes the chat; Olia +4, Maks +4, stress +3, set `scam_recognized` → control check → Scene `11N`.
-- **Option C:** immediately block the contact and report the listing → Olia +2, Maks +3, stress −2, set `scam_recognized` → control check → Scene `11N`.
+- **Варіант А:** переказати 5 000 грн, щоб не втратити дешеву квартиру → бюджет −5 000 грн, стрес +20 → перехід до фіналу `F3`.
+- **Варіант Б:** попросити відеодзвінок із квартири, документ про право власності й ім’я отримувача картки → співрозмовниця видаляє чат; Оля +4, Макс +4, стрес +3, встановити `scam_recognized` → контрольна перевірка → сцена `11N`.
+- **Варіант В:** одразу заблокувати контакт і поскаржитися на оголошення → Оля +2, Макс +3, стрес −2, встановити `scam_recognized` → контрольна перевірка → сцена `11N`.
 
-**Consequence:**  
-Transferring the money ends the game immediately: the group loses the funds and no longer has enough reserve for a safe move. A cautious action preserves the chance to receive the final offer.
+**Наслідок:**  
+Переказ коштів завершує гру негайно: команда втрачає гроші й уже не має достатнього резерву для безпечного переїзду. Обережна дія зберігає шанс на фінальну пропозицію.
 
-**Next scene:** `F3. A Deposit into Nowhere` or `11N. Without the Word ‘Urgent’`.
+**Наступна сцена:** `F3. Завдаток у нікуди` або `11N. Без слова «терміново»`.
 
-#### Scene 11N. Without the Word “Urgent”
+#### Сцена 11N. Без слова «терміново»
 
-**Location:** university reading room; Marta’s phone.  
-**Time:** Friday, 1:00 p.m.  
-**Participants:** Marta, Olia, Maks, Andrii; Larysa in a message if the relevant flag is active.  
-**Prerequisite:** follows the rejection of the fraudulent offer.
+**Локація:** читальна зала університету; телефон Марти.  
+**Час:** п’ятниця, 13:00.  
+**Учасники:** Марта, Оля, Макс, Андрій; Лариса у повідомленні, якщо активний відповідний прапорець.  
+**Передумова:** після відмови від шахрайської пропозиції.
 
-**Scene description:**  
-Marta receives a response to an earlier inquiry. A realtor named Andrii offers an ordinary three-bedroom apartment in Obolon: UAH 13,000 rent, 50% commission, and a total move-in payment of UAH 19,500. The owner has agreed to split the security deposit across the following two months. Andrii immediately sends the address, floor plan, and draft contract. If Marta previously spoke to Larysa, Larysa calls from a new number at that moment; Marta rejects the call.
+**Опис сцени:**  
+Марта отримує відповідь на старий запит. Рієлтор Андрій пропонує звичайну трикімнатну квартиру на Оболоні: 13 000 грн оренди, 50% комісії, разом 19 500 грн при заселенні. Страховий платіж власник погодився розділити на два наступні місяці. Андрій одразу надсилає адресу, план квартири й чернетку договору. Якщо Марта колись говорила з Ларисою, та в цей момент телефонує з нового номера; Марта скидає виклик.
 
-**Dialogue:**
+**Діалог:**
 
-**Andrii:** The drawbacks first: the kitchen is small, the renovation is not new, and the metro is a twelve-minute walk away. All three rooms are separate, the building is undamaged, and there is a shelter in the school across the road.
+**Андрій:** Одразу про мінуси: кухня маленька, ремонт не новий, до метро дванадцять хвилин. Три кімнати окремі, будинок без пошкоджень, укриття в школі навпроти.
 
-**Olia:** He named the drawbacks himself. Are we sure he’s a realtor?
+**Оля:** Він сам назвав мінуси. Це точно рієлтор?
 
-**Maks:** Thirteen plus six and a half makes nineteen five hundred.
+**Макс:** Тринадцять плюс шість із половиною — дев’ятнадцять п’ятсот.
 
-**Marta:** If we haven’t spent money anywhere else, we can just afford it.
+**Марта:** Якщо ми ніде не витратилися, вистачає майже впритул.
 
-**Andrii:** You can read the contract first. The viewing is at six, and you don’t have to decide on the spot.
+**Андрій:** Можете спершу прочитати договір. Перегляд о шостій, рішення не зобов’язані давати на місці.
 
-**Maks:** No timer either. Suspiciously normal.
+**Макс:** Ще й без таймера. Підозріло нормально.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Automatic budget check:** if the budget is below UAH 19,500, the friends cannot pay the first month and commission → proceed to ending `F9`.
-- **Automatic transition:** if the budget is UAH 19,500 or higher, the friends confirm the viewing → stress −5 → proceed to Scene `12N`.
+- **Автоматична перевірка бюджету:** якщо бюджет менший за 19 500 грн, друзі не можуть сплатити перший платіж і комісію → перехід до фіналу `F9`.
+- **Автоматичний перехід:** якщо бюджет становить 19 500 грн або більше, друзі підтверджують перегляд → стрес −5 → перехід до сцени `12N`.
 
-**Consequence:**  
-The effect of previous financial decisions becomes direct: after the failed trip to Oksana, the group can no longer afford this option.
+**Наслідок:**  
+Наслідок попередніх фінансових рішень стає прямим: після невдалої поїздки до Оксани грошей на цей варіант уже не вистачає.
 
-**Next scene:** `12N. An Ordinary Apartment` or `F9. Back to the Dormitory`.
+**Наступна сцена:** `12N. Звичайна квартира` або `F9. Назад у гуртожиток`.
 
-#### Scene 12N. An Ordinary Apartment
+#### Сцена 12N. Звичайна квартира
 
-**Location:** three-bedroom apartment in Obolon.  
-**Time:** Friday, 6:00 p.m.  
-**Participants:** Marta, Olia, Maks, Andrii.  
-**Prerequisite:** follows Scene `11N` if the budget is at least UAH 19,500.
+**Локація:** трикімнатна квартира на Оболоні.  
+**Час:** п’ятниця, 18:00.  
+**Учасники:** Марта, Оля, Макс, Андрій.  
+**Передумова:** зі сцени `11N`, якщо бюджет не менший за 19 500 грн.
 
-**Scene description:**  
-The apartment has no designer furniture, but every room is separate, the water does not leak, the windows close, and mobile internet works. Andrii shows them the utility meters, the owner’s documents, and the route to the shelter. There is a scuff on the corridor wall and a scratch on the washing machine. Everything can be recorded in the handover report.
+**Опис сцени:**  
+У квартирі немає дизайнерських меблів, зате всі кімнати окремі, вода не тече, вікна зачиняються, мобільний інтернет працює. Андрій показує лічильники, документи власника й вихід до укриття. На стіні в коридорі є потертість, на пральній машині — подряпина. Усе можна внести до акта приймання.
 
-**Dialogue:**
+**Діалог:**
 
-**Olia:** My room has a door, a power outlet, and a desk. I’m almost afraid to be happy.
+**Оля:** У моїй кімнаті є двері, розетка й стіл. Я вже боюся радіти.
 
-**Maks:** The kitchen really is small.
+**Макс:** Кухня справді маленька.
 
-**Marta:** We cooked on one hotplate between two pots in the dormitory. We’ll survive.
+**Марта:** Ми в гуртожитку готували на одній конфорці між двома каструлями. Переживемо.
 
-**Andrii:** Here is the property-register extract. There is one owner. Here are the latest utility bills and the emergency contact details.
+**Андрій:** Ось витяг про право власності. Власник один. Ось останні квитанції й контакти для аварійних ситуацій.
 
-**Olia:** What happens if there’s no water during a power outage?
+**Оля:** А якщо під час відключення не буде води?
 
-**Andrii:** The pump depends on electricity. There is a tank in the basement, but it is better to know about that inconvenience now.
+**Андрій:** Насос залежить від електрики. У підвалі є бак, але це незручність, яку краще знати зараз.
 
-**Maks:** Finally, a defect no one has called an art installation.
+**Макс:** Нарешті недолік, який не назвали артоб’єктом.
 
-**Marta:** We’ll check everything against the list and decide.
+**Марта:** Перевіримо все по списку й вирішимо.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** verify ownership, water, windows, meters, internet, and shelter access, and document the defects → Olia +5, Maks +3, stress −6, set `documents_checked` → control check → Scene `13N`.
-- **Option B:** avoid spending time on checks and proceed directly to payment → budget −UAH 19,500, stress +5 → proceed to ending `F5`.
-- **Option C:** refuse because the apartment does not look modern enough → Maks −7, Olia −4, stress +8 → proceed to ending `F9`.
+- **Варіант А:** перевірити право власності, воду, вікна, лічильники, інтернет, укриття та зафіксувати дефекти → Оля +5, Макс +3, стрес −6, встановити `documents_checked` → контрольна перевірка → сцена `13N`.
+- **Варіант Б:** не витрачати час на перевірку й одразу перейти до оплати → бюджет −19 500 грн, стрес +5 → перехід до фіналу `F5`.
+- **Варіант В:** відмовитися, бо квартира не виглядає достатньо сучасною → Макс −7, Оля −4, стрес +8 → перехід до фіналу `F9`.
 
-**Consequence:**  
-A full inspection opens the best ending. Rushing secures the apartment but does not guarantee a transparent record of its condition and charges.
+**Наслідок:**  
+Повна перевірка відкриває найкращий фінал. Поспіх дає квартиру, але не гарантує прозорого стану майна й платежів.
 
-**Next scene:** `13N. Nineteen and a Half` or ending `F5` or `F9`.
+**Наступна сцена:** `13N. Дев’ятнадцять з половиною` або один із фіналів `F5`, `F9`.
 
-#### Scene 13N. Nineteen and a Half
+#### Сцена 13N. Дев’ятнадцять з половиною
 
-**Location:** kitchen of the final apartment.  
-**Time:** Friday, 7:00 p.m.  
-**Participants:** Marta, Olia, Maks, Andrii.  
-**Prerequisite:** follows Scene `12N` if the friends completed the full inspection.
+**Локація:** кухня фінальної квартири.  
+**Час:** п’ятниця, 19:00.  
+**Учасники:** Марта, Оля, Макс, Андрій.  
+**Передумова:** зі сцени `12N`, якщо друзі провели повну перевірку.
 
-**Scene description:**  
-The contract lies on the table. The main figures and deadlines match Andrii’s messages. The contract requires the owner to provide notice before visiting, but the handover report does not yet include the meter readings, the scratch on the washing machine, or the scuff in the corridor.
+**Опис сцени:**  
+На столі лежить договір. Основні суми та строки збігаються з повідомленнями Андрія. У договорі є правило про попередження перед візитом власника, але в акті ще не записані показники лічильників, подряпина на машинці та потертість у коридорі.
 
-**Dialogue:**
+**Діалог:**
 
-**Marta:** Everything in the contract matches. We only need to add the defects and meter readings to the report.
+**Марта:** У договорі все збігається. Треба лише додати дефекти й показники в акт.
 
-**Andrii:** Add them. I’ll photograph the signed copy and send it to everyone.
+**Андрій:** Додавайте. Я сфотографую підписаний примірник і надішлю всім.
 
-**Maks:** We’ll have five hundred hryvnias left after this.
+**Макс:** Після цього в нас лишиться п’ятсот гривень.
 
-**Olia:** Better that than being five thousand short, or living with a bathtub that has its own ecosystem.
+**Оля:** Зате не мінус п’ять тисяч і не ванна з власною екосистемою.
 
-**Marta:** The security deposit will be paid in two installments from our next income. That is written down too.
+**Марта:** Страховий платіж піде двома частинами з наступних доходів. Це теж записано.
 
-**Andrii:** Yes. If the amounts and deadlines are clear, we can sign.
+**Андрій:** Так. Якщо суми й строки вам зрозумілі, можемо підписувати.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Option A:** add the readings, defects, and deadline for returning the security deposit; reread and sign → budget −UAH 19,500, Olia +5, Maks +5, stress −8 → proceed to ending `F4`.
-- **Option B:** sign the main contract without clarifying the handover report because everyone is exhausted → budget −UAH 19,500, stress +4 → proceed to ending `F5`.
-- **Option C:** lose confidence at the last moment and withdraw from the agreement → budget unchanged, Olia −5, Maks −6, stress +10 → proceed to ending `F9`.
+- **Варіант А:** дописати показники, дефекти й строк повернення страхового платежу; перечитати та підписати → бюджет −19 500 грн, Оля +5, Макс +5, стрес −8 → перехід до фіналу `F4`.
+- **Варіант Б:** підписати основний договір без уточнення акта, бо всі втомилися → бюджет −19 500 грн, стрес +4 → перехід до фіналу `F5`.
+- **Варіант В:** злякатися останньої миті й відмовитися від угоди → бюджет без змін, Оля −5, Макс −6, стрес +10 → перехід до фіналу `F9`.
 
-**Consequence:**  
-The final choice determines whether the group receives a safe agreement, accepts a rushed compromise, or remains without an apartment.
+**Наслідок:**  
+Фінальний вибір визначає, чи команда отримає безпечну угоду, поспішний компроміс або залишиться без квартири.
 
-**Next scene:** ending `F4`, `F5`, or `F9`.
+**Наступна сцена:** один із фіналів `F4`, `F5`, `F9`.
 
-#### Ending F1. Larysa’s Gem
+#### Фінал F1. Ларисина перлина
 
-**Location:** apartment in Lukianivka.  
-**Time:** one week after moving in.  
-**Participants:** Marta, Olia, Maks; Larysa in a voice message.  
-**Prerequisite:** follows Scene `05L` if Marta agrees to rent the apartment.
+**Локація:** квартира на Лук’янівці.  
+**Час:** через тиждень після заселення.  
+**Учасники:** Марта, Оля, Макс, Лариса в голосовому повідомленні.  
+**Передумова:** зі сцени `05L`, якщо Марта погодилася орендувати квартиру.
 
-**Scene description:**  
-Boxes fill the corridor. The elevator is out of service again, water has returned beneath the bathtub, and Olia takes a work call in headphones from the passage room. A voice message from Larysa on Marta’s phone offers “an even better option.”
+**Опис сцени:**  
+У коридорі стоять коробки. Ліфт знову не працює, під ванною повернулася вода, а Оля проводить робочий дзвінок у навушниках у прохідній кімнаті. На телефоні Марти — голосове від Лариси з пропозицією «ще кращого варіанта».
 
-**Dialogue:**
+**Діалог:**
 
-**Maks:** If you don’t count the elevator, the water, or the commission, we really did save money.
+**Макс:** Якщо не рахувати ліфт, воду й комісію, ми справді зекономили.
 
-**Olia:** And if you don’t count the apartment, we barely spent anything at all.
+**Оля:** А якщо не рахувати квартиру, то взагалі майже нічого не витратили.
 
-**Marta:** We rushed. Next time, a low price won’t outweigh the entire checklist.
+**Марта:** Ми поспішили. Наступного разу низька ціна не буде аргументом проти всього списку.
 
-**Larysa** *(from the phone):* Marta, darling, I have a gem in Troieshchyna. A balcony with a bathtub—very exclusive.
+**Лариса** *(з телефона):* Марточко, є перлина на Троєщині. Балкон із ванною, дуже ексклюзивно.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** Marta blocks yet another of Larysa’s numbers → end of story.
+- **Лінійна дія:** Марта блокує черговий номер Лариси → завершення історії.
 
-**Consequence:**  
-The group found an apartment but sacrificed safety and comfort for the price. The relationship with Olia has deteriorated, and the search will have to begin again after the short-term contract ends.
+**Наслідок:**  
+Квартира знайдена, але безпекою та комфортом пожертвували заради ціни. Стосунки з Олею погіршилися, пошук доведеться повторити після завершення короткого договору.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-#### Ending F2. The Contract That Wrote Itself
+#### Фінал F2. Договір, який дописав себе
 
-**Location:** apartment near Vasylkivska.  
-**Time:** move-out day, several months later.  
-**Participants:** Marta, Olia, Maks; Ihnat by phone.  
-**Prerequisite:** follows Scene `07I` if the group signed the opaque contract.
+**Локація:** квартира біля Васильківської.  
+**Час:** день виїзду через кілька місяців.  
+**Учасники:** Марта, Оля, Макс, Ігнат телефоном.  
+**Передумова:** зі сцени `07I`, якщо команда підписала непрозорий договір.
 
-**Scene description:**  
-The apartment is clean, but Ihnat sends a UAH 5,000 invoice for “mandatory cleaning.” The owner deducts the amount from the security deposit. The contract contains no such clause, but the verbal agreement proves nothing.
+**Опис сцени:**  
+Квартира чиста, але Ігнат надсилає рахунок на 5 000 грн за «обов’язковий клінінг». Власник утримує цю суму зі страхового платежу. У договорі такого пункту немає, але усна домовленість нічого не доводить.
 
-**Dialogue:**
+**Діалог:**
 
-**Olia:** We asked why that condition wasn’t in the contract.
+**Оля:** Ми питали, чому цього немає в договорі.
 
-**Maks:** And signed anyway because we were tired of searching.
+**Макс:** І все одно підписали, бо втомилися шукати.
 
-**Marta:** The apartment was fine. The agreement wasn’t.
+**Марта:** Квартира була нормальною. Угода — ні.
 
-**Ihnat** *(by phone):* I told you about the cleaning. It is not my problem that you didn’t write it down.
+**Ігнат** *(телефоном):* Я ж вам казав про клінінг. Те, що ви не записали, — не моя проблема.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** the friends save the correspondence and decide never again to accept verbal terms → end of story.
+- **Лінійна дія:** друзі зберігають листування й вирішують більше не приймати усні умови → завершення історії.
 
-**Consequence:**  
-The group obtained housing but paid for rushing into an opaque agreement.
+**Наслідок:**  
+Команда отримала житло, але заплатила за поспіх і непрозорий договір.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-#### Ending F3. A Deposit into Nowhere
+#### Фінал F3. Завдаток у нікуди
 
-**Location:** dormitory kitchen; phone screen.  
-**Time:** immediately after the transfer.  
-**Participants:** Marta, Olia, Maks.  
-**Prerequisite:** follows Scene `10S` if Marta transfers UAH 5,000 before a viewing.
+**Локація:** кухня гуртожитку; екран телефона.  
+**Час:** одразу після переказу.  
+**Учасники:** Марта, Оля, Макс.  
+**Передумова:** зі сцени `10S`, якщо Марта переказала 5 000 грн до перегляду.
 
-**Scene description:**  
-The message remains unread. A minute later, the profile photo, chat, and listing all disappear. The number is unavailable. Marta’s banking app displays a successful transfer.
+**Опис сцени:**  
+Повідомлення лишається непрочитаним. За хвилину зникають фото профілю, чат і саме оголошення. Номер недоступний. На екрані банку — успішний переказ.
 
-**Dialogue:**
+**Діалог:**
 
-**Marta:** She deleted the chat.
+**Марта:** Вона видалила чат.
 
-**Maks:** Try calling.
+**Макс:** Спробуй подзвонити.
 
-**Marta:** The number already doesn’t exist.
+**Марта:** Номер уже не існує.
 
-**Olia:** We didn’t pay for an apartment. We paid for ten minutes of someone else’s pressure.
+**Оля:** Ми заплатили не за квартиру. Ми заплатили за десять хвилин чужого тиску.
 
-**Maks:** Now our reserve definitely isn’t enough for a normal move.
+**Макс:** Тепер резерву точно не вистачить на нормальне заселення.
 
-**Marta:** We no longer have enough for a normal initial payment.
+**Марта:** На нормальний стартовий платіж уже не вистачить.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** Marta contacts the bank and files a report, but the money is not guaranteed to be returned → end of story.
+- **Лінійна дія:** Марта звертається до банку та подає заяву, але повернення грошей не гарантоване → завершення історії.
 
-**Consequence:**  
-The money is lost and no apartment is found. The friends accept relocation to the other dormitory.
+**Наслідок:**  
+Гроші втрачено, квартиру не знайдено. Друзі погоджуються на переселення в інший гуртожиток.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-#### Ending F4. Ordinary, but Yours
+#### Фінал F4. Звичайна, зате ваша
 
-**Location:** final apartment in Obolon.  
-**Time:** Saturday, moving day.  
-**Participants:** Marta, Olia, Maks.  
-**Prerequisite:** follows Scene `13N` if the group inspected the apartment, completed the documents, and signed the contract.
+**Локація:** фінальна квартира на Оболоні.  
+**Час:** субота, день переїзду.  
+**Учасники:** Марта, Оля, Макс.  
+**Передумова:** зі сцени `13N`, якщо команда перевірила квартиру, доповнила документи й підписала договір.
 
-**Scene description:**  
-Boxes stand in every room. Olia tests a video call at her desk. Maks ceremoniously places a packet of buckwheat in the small kitchen. Marta hangs their first criteria list on the refrigerator.
+**Опис сцени:**  
+У кімнатах стоять коробки. Оля перевіряє відеодзвінок за своїм столом. Макс урочисто ставить на маленьку кухню пачку гречки. Марта вішає на холодильник їхній перший список критеріїв.
 
-**Dialogue:**
+**Діалог:**
 
-**Olia:** The internet hasn’t disappeared. The door closes. I can hardly believe it.
+**Оля:** Інтернет не зник. Двері зачиняються. Я майже не вірю.
 
-**Maks:** We have five hundred hryvnias, but at least there was no seventy-five-percent commission.
+**Макс:** У нас п’ятсот гривень, зате жодної комісії в сімдесят п’ять відсотків.
 
-**Marta:** And every amount is written down. The scratch is written down. Even the small kitchen was honestly disclosed.
+**Марта:** І всі суми записані. І подряпина записана. І навіть маленька кухня була чесно заявлена.
 
-**Olia:** So a normal apartment is one where no one tries to convince you that a problem is an advantage.
+**Оля:** Виходить, нормальна квартира — це коли тебе не переконують, що проблема є перевагою.
 
-**Maks:** Don’t destroy the magic of the property market.
+**Макс:** Не руйнуй магію ринку нерухомості.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** the friends order the cheapest pizza and eat dinner sitting on the boxes → end of story.
+- **Лінійна дія:** друзі замовляють найдешевшу піцу й вечеряють на коробках → завершення історії.
 
-**Consequence:**  
-The best ending. The group remains together, the risks have been checked, and the apartment meets their agreed minimum. It is not perfect, but the agreement is clear.
+**Наслідок:**  
+Найкращий фінал. Команда збереглася, ризики перевірено, а квартира відповідає погодженому мінімуму. Вона не ідеальна, але угода зрозуміла.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-#### Ending F5. Keys Before the Checklist
+#### Фінал F5. Ключі швидше за чекліст
 
-**Location:** final apartment in Obolon.  
-**Time:** the first evening after moving in.  
-**Participants:** Marta, Olia, Maks.  
-**Prerequisite:** follows Scene `12N` or `13N` if the friends sign without a full inspection or clarified handover report.
+**Локація:** фінальна квартира на Оболоні.  
+**Час:** перший вечір після заселення.  
+**Учасники:** Марта, Оля, Макс.  
+**Передумова:** зі сцени `12N` або `13N`, якщо друзі підписали угоду без повної перевірки чи уточненого акта.
 
-**Scene description:**  
-Marta already has the keys. During the first load of laundry, Maks notices an old crack in the washing-machine door that does not appear in the handover report. It is not a disaster, but the group will now have to prove separately that the damage was already there.
+**Опис сцени:**  
+Ключі вже в Марти. Під час першого прання Макс помічає стару тріщину на дверцятах машинки, якої немає в акті. Це не катастрофа, але тепер доведеться окремо доводити, що пошкодження було раніше.
 
-**Dialogue:**
+**Діалог:**
 
-**Maks:** Tell me that crack was already there.
+**Макс:** Скажіть, що ця тріщина була тут.
 
-**Olia:** It was. We just didn’t write it down.
+**Оля:** Була. Ми просто не записали.
 
-**Marta:** I’ll message Andrii now and send the photo. Maybe the owner will confirm it.
+**Марта:** Напишу Андрію зараз і надішлю фото. Може, власник підтвердить.
 
-**Maks:** The apartment is good. We simply decided, once again, that five minutes wouldn’t make a difference.
+**Макс:** Квартира хороша. Просто ми знову вирішили, що п’ять хвилин нічого не змінять.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** Marta records the defect in the message thread and saves the photograph → end of story.
+- **Лінійна дія:** Марта фіксує дефект у листуванні й зберігає фото → завершення історії.
 
-**Consequence:**  
-The group has a home and remains together, but the ending is a reminder that documents must be completed properly even when the people involved appear reasonable.
+**Наслідок:**  
+Команда має житло й лишається разом, але фінал нагадує: навіть із нормальними людьми документи треба доводити до кінця.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-#### Ending F6. Olia Searches Alone
+#### Фінал F6. Оля шукає сама
 
-**Location:** dormitory corridor.  
-**Time:** the moment the control check is triggered.  
-**Participants:** Marta, Olia, Maks.  
-**Prerequisite:** follows any non-final choice if the relationship with Olia falls to 30 or below and the condition for ending `F8` is not met.
+**Локація:** коридор гуртожитку.  
+**Час:** момент спрацювання контрольної перевірки.  
+**Учасники:** Марта, Оля, Макс.  
+**Передумова:** після будь-якого нефінального вибору, якщо стосунки з Олею знизилися до 30 або нижче, а умова фіналу `F8` не спрацювала.
 
-**Scene description:**  
-Olia closes the laptop and removes her list from the table. She no longer argues; she simply announces her decision.
+**Опис сцени:**  
+Оля закриває ноутбук і прибирає зі столу свій список. Вона більше не сперечається — просто повідомляє рішення.
 
-**Dialogue:**
+**Діалог:**
 
-**Olia:** I keep explaining that I need a place where I can work and feel safe. If those are always “unnecessary demands,” I would rather find a room on my own.
+**Оля:** Я весь час пояснюю, що мені потрібне місце, де можна працювати й почуватися безпечно. Якщо це щоразу «зайві вимоги», я краще знайду кімнату сама.
 
-**Marta:** We can review the criteria again.
+**Марта:** Ми можемо ще переглянути критерії.
 
-**Olia:** We already have. Mostly in the direction of deciding that my conditions can be ignored.
+**Оля:** Ми вже переглядали. Переважно в бік того, що мої умови можна не враховувати.
 
-**Maks:** An apartment for two will be more expensive.
+**Макс:** Тоді на двох квартира буде дорожча.
 
-**Olia:** That is exactly why I’m saying this now, rather than after we sign something.
+**Оля:** Саме тому я кажу зараз, а не після підписання.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** Olia leaves the shared housing-search chat → end of story.
+- **Лінійна дія:** Оля виходить зі спільного чату пошуку → завершення історії.
 
-**Consequence:**  
-The shared budget no longer covers three-bedroom options. Marta and Maks abandon the plan, while Olia finds a room of her own.
+**Наслідок:**  
+Спільний бюджет більше не покриває трикімнатні варіанти. Марта й Макс відмовляються від плану, Оля знаходить окрему кімнату.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-#### Ending F7. Maks Budgets for One
+#### Фінал F7. Макс рахує на одного
 
-**Location:** dormitory stairwell.  
-**Time:** the moment the control check is triggered.  
-**Participants:** Marta, Olia, Maks.  
-**Prerequisite:** follows any non-final choice if the relationship with Maks falls to 30 or below and the condition for ending `F8` is not met.
+**Локація:** сходи гуртожитку.  
+**Час:** момент спрацювання контрольної перевірки.  
+**Учасники:** Марта, Оля, Макс.  
+**Передумова:** після будь-якого нефінального вибору, якщо стосунки з Максом знизилися до 30 або нижче, а умова фіналу `F8` не спрацювала.
 
-**Scene description:**  
-Maks shows the others a room listing on his phone. He has already arranged a viewing on his own.
+**Опис сцени:**  
+Макс показує на телефоні оголошення про кімнату. Він уже домовився про перегляд наодинці.
 
-**Dialogue:**
+**Діалог:**
 
-**Maks:** I’m not against comfort. I’m against every conversation about money being treated as greed.
+**Макс:** Я не проти комфорту. Я проти того, щоб кожна розмова про гроші звучала як жадібність.
 
-**Marta:** We can still find a balance.
+**Марта:** Ми ще можемо знайти баланс.
 
-**Maks:** Balance means my limit is a condition too, not an obstacle. I can’t afford your option, and I don’t want to borrow money.
+**Макс:** Баланс — це коли мій ліміт теж умова, а не перешкода. Я не потягну ваш варіант і не хочу позичати.
 
-**Olia:** You could have said that earlier.
+**Оля:** Можна було сказати раніше.
 
-**Maks:** I did. It simply never affected the decisions.
+**Макс:** Я казав. Просто це не впливало на рішення.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** Maks leaves the shared search and goes to view a room on his own → end of story.
+- **Лінійна дія:** Макс залишає спільний пошук і їде дивитися окрему кімнату → завершення історії.
 
-**Consequence:**  
-Without Maks’s contribution, the shared apartment becomes unaffordable. Marta and Olia accept relocation, while Maks rents a room by himself.
+**Наслідок:**  
+Без частки Макса спільна квартира стає недоступною. Марта й Оля погоджуються на переселення, а Макс винаймає кімнату сам.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-#### Ending F8. Three Separate Ways
+#### Фінал F8. Троє в різні боки
 
-**Location:** dormitory kitchen.  
-**Time:** late evening on the day the control check is triggered.  
-**Participants:** Marta, Olia, Maks.  
-**Prerequisite:** follows any non-final choice if stress reaches 60, or if both relationship values are 30 or below.
+**Локація:** кухня гуртожитку.  
+**Час:** пізній вечір у день спрацювання контрольної перевірки.  
+**Учасники:** Марта, Оля, Макс.  
+**Передумова:** після будь-якого нефінального вибору, якщо стрес досяг 60 або стосунки з обома друзями не перевищують 30.
 
-**Scene description:**  
-All three phones on the table ring at once. Larysa leaves a voice message, the listing website sends new offers, and the dormitory supervisor reminds them about the keys. The conversation turns into an argument.
+**Опис сцени:**  
+На столі одночасно дзвонять три телефони. Лариса лишає голосове, сайт надсилає нові оголошення, комендантка нагадує про ключі. Розмова переходить у сварку.
 
-**Dialogue:**
+**Діалог:**
 
-**Olia:** We’re no longer looking for an apartment. We’re taking turns proving whose needs matter less.
+**Оля:** Ми вже не шукаємо квартиру. Ми просто по черзі доводимо, чиї потреби менш важливі.
 
-**Maks:** And spending money we don’t have.
+**Макс:** І витрачаємо гроші, яких у нас немає.
 
-**Marta:** I was trying to hold everything together.
+**Марта:** Я намагалася втримати все разом.
 
-**Olia:** Making decisions for everyone is not the same as doing something together.
+**Оля:** Але рішення за всіх — це не те саме, що разом.
 
-**Maks:** Let’s stop while we can still speak to each other normally.
+**Макс:** Зупинімося, поки ми ще можемо нормально говорити.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** the friends close the shared spreadsheet and separate to look for individual options → end of story.
+- **Лінійна дія:** друзі закривають спільну таблицю й розходяться шукати окремі варіанти → завершення історії.
 
-**Consequence:**  
-They do not find an apartment together. The conflict does not necessarily end the friendship forever, but the shared move is canceled.
+**Наслідок:**  
+Квартиру разом не знайдено. Конфлікт не обов’язково завершує дружбу назавжди, але спільний переїзд скасовано.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-#### Ending F9. Back to the Dormitory
+#### Фінал F9. Назад у гуртожиток
 
-**Location:** another student dormitory.  
-**Time:** Sunday, 8:30 p.m.  
-**Participants:** Marta, Olia, Maks; new roommates off-screen.  
-**Prerequisite:** follows Scene `11N` if the budget is below UAH 19,500, or Scene `12N` or `13N` if the group refuses the final apartment.
+**Локація:** інший студентський гуртожиток.  
+**Час:** неділя, 20:30.  
+**Учасники:** Марта, Оля, Макс; нові сусіди поза кадром.  
+**Передумова:** зі сцени `11N`, якщо бюджету менше 19 500 грн; або зі сцен `12N` чи `13N`, якщо команда відмовилася від останньої квартири.
 
-**Scene description:**  
-The three friends carry their belongings into a cramped room with two bunk beds. Someone behind a divider is on a video call, and a queue has formed for the corridor shower. It is the exact relocation the friends had tried to avoid.
+**Опис сцени:**  
+Трійця заносить речі до тісної кімнати з двома двоповерховими ліжками. За ширмою хтось веде відеодзвінок, у коридорі черга до душу. Це саме переселення, якого друзі намагалися уникнути.
 
-**Dialogue:**
+**Діалог:**
 
-**Maks:** At least there’s no commission.
+**Макс:** Зате без комісії.
 
-**Olia:** And only three unplanned roommates.
+**Оля:** І з трьома незапланованими сусідами.
 
-**Marta:** We didn’t find an apartment, but at least we didn’t sign anything we didn’t understand.
+**Марта:** Ми не знайшли квартиру, але хоча б не підписали те, чого не розуміли.
 
-**Maks** *(if `lied_to_oksana` is active):* And we’re two thousand short because of a taxi to an apartment we could never have rented.
+**Макс** *(якщо активний прапорець `lied_to_oksana`):* І ще мінус дві тисячі за таксі до квартири, якої в нас не могло бути.
 
-**Maks** *(if `lied_to_oksana` is inactive):* At least we didn’t lose any money.
+**Макс** *(якщо прапорець `lied_to_oksana` неактивний):* Зате гроші ми не втратили.
 
-**Olia:** Next time, we won’t start with listings. We’ll start with a budget and rules.
+**Оля:** Наступний пошук почнемо не з оголошень. Почнемо з бюджету й правил.
 
-**Marta:** And no lying about our ages.
+**Марта:** І без брехні про вік.
 
-**Action or choice:**
+**Дія або вибір:**
 
-- **Linear action:** Marta creates a new note titled “Housing Search—Second Attempt” → end of story.
+- **Лінійна дія:** Марта створює нову нотатку «Пошук житла — друга спроба» → завершення історії.
 
-**Consequence:**  
-The group remains without an apartment but may preserve the friendship and try again. This is the result of lost money, refusal of the final option, or excessive caution after all the previous risks.
+**Наслідок:**  
+Команда лишилася без квартири, але може зберегти дружбу й спробувати знову. Це наслідок втрачених грошей, відмови від останнього варіанта або надмірної обережності після всіх попередніх ризиків.
 
-**Next scene:** end.
+**Наступна сцена:** завершення.
 
-## 6. Authorial additions
+## 6. Авторські доповнення
 
-- The initial reason for the search has been clarified: the dormitory is closing for renovations, and the group wants to avoid an undesirable relocation. This directly develops the team’s proposal and establishes a clear deadline.
-- Exact initial payments, commissions, and transport costs have been added so that the hryvnia budget genuinely affects whether the final apartment is affordable.
-- The reasonable realtor has been given a name, Andrii, and a distinct communication style. The team defined his function and commission but did not provide a complete character.
-- The apartments have been developed in detail: a damaged building in Lukianivka, the opaque contract near Vasylkivska, the Syrets apartment owned by a woman who rejects young tenants, and the final apartment in Obolon. These details are based on risks identified by the team: safety, blackouts, shelter access, renovation quality, hidden charges, and age discrimination.
-- Control rules have been added to direct the story to endings based on separate relationship values for Olia and Maks and on the stress level. This turns the discussed parameters into unambiguous scenario logic.
-- Full dialogue, reactions, intermediate consequences, and nine complete endings have been added. They ensure that every choice has a transition and every branch has a narrative conclusion.
+- Уточнено стартову причину пошуку: закриття гуртожитку на ремонт і небажане переселення. Це прямо розвиває командну пропозицію та створює зрозумілий дедлайн.
+- Додано точні суми першого платежу, комісій і транспортних витрат, щоб бюджет у гривнях реально впливав на доступність фінальної квартири.
+- Створено ім’я й манеру спілкування нормального рієлтора Андрія. Команда визначила його функцію та комісію, але не дала готового персонажа.
+- Деталізовано квартири: Лук’янівка з пошкодженим будинком, Васильківська з непрозорим договором, Сирець із власницею, яка відсіює молодь, і фінальна Оболонь. Деталі базуються на названих командою ризиках: безпека, блекаути, укриття, стан ремонту, приховані платежі та ейджизм.
+- Додано контрольні правила переходу до фіналів за окремими стосунками з Олею й Максом та за рівнем стресу. Це перетворює обговорені параметри на однозначну сценарну логіку.
+- Дописано повні діалоги, реакції, проміжні наслідки й дев’ять завершених фіналів. Вони потрібні, щоб жоден вибір не залишався без переходу, а кожна гілка мала сюжетне завершення.

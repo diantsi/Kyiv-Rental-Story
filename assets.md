@@ -2,6 +2,8 @@
 
 This list is aligned with the canonical branching story in `Script.md`: 13 scene nodes and 9 endings (`F1–F9`). Reuse backgrounds and UI compositions aggressively; the full narrative must not be reduced to save asset-production time.
 
+All player-facing text must be Ukrainian and rendered as accessible HTML/CSS. Asset-production instructions remain in English; do not bake Ukrainian dialogue, labels, amounts, or document text into raster images.
+
 ## Overall scope
 
 - 11 reusable backgrounds;
@@ -110,7 +112,7 @@ These are compositions, not necessarily nine unique full illustrations. Reuse ba
 
 Create UI as accessible HTML/CSS components rather than finished raster images.
 
-- [ ] Main menu with Continue, New Game, and sound control.
+- [ ] Main menu with “Продовжити,” “Почати гру,” and “Звук” controls.
 - [ ] Dialogue box.
 - [ ] Speaker nameplate.
 - [ ] Choice button with hover, focus, pressed, and disabled states.

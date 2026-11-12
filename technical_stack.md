@@ -8,6 +8,12 @@ The MVP implements the complete canonical content from `Script.md`: 13 scene nod
 
 ## Selected stack
 
+### Language boundary
+
+- Keep repository instructions, technical documentation, filenames, and code identifiers in English.
+- Render all player-facing story and interface copy in Ukrainian, using `Script.md` as the canonical text source.
+- Do not translate dialogue, scene titles, choice labels, or visible UI labels into English. Technical IDs such as `04L`, `F8`, and `larysa_contact` remain unchanged.
+
 ### Interface and build tooling
 
 - **React** — visual-novel screens and UI components.
@@ -75,8 +81,8 @@ Keep the threshold check in one pure function. Keep direct transitions in the sc
 ### Saving
 
 - Use **`localStorage`** for versioned autosave after every resolved action or choice.
-- The main menu provides “Continue” and “Start Over.”
-- “Start Over” clears only this game’s save key.
+- The main menu provides the Ukrainian controls “Продовжити” and “Почати спочатку.”
+- “Почати спочатку” clears only this game’s save key.
 - Invalid or incompatible save data falls back safely to a new game.
 - Saves remain local to one browser and are not synchronized across devices.
 

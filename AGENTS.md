@@ -1,10 +1,10 @@
-# AGENTS.md — Kyiv Rental
+# AGENTS.md — Kyivska Orenda
 
 ## Repository orientation
 
 Read only the source needed for the current task:
 
-- `Script.md` — canonical narrative, node IDs, choices, effects, flags, transitions, and endings.
+- `Script.md` — canonical Ukrainian narrative and player-facing copy, plus node IDs, choices, effects, flags, transitions, and endings.
 - `technical_stack.md` — approved architecture, MVP boundaries, state model, validation, and Vercel deployment.
 - `assets.md` — canonical media inventory, reuse plan, UI assets, and file formats.
 
@@ -13,7 +13,8 @@ Inspect the live repository before changing it. Do not assume that the applicati
 ## Critical invariants
 
 - Do not shorten the story: implement all 13 scene nodes, 27 interactive options, and endings `F1–F9`. A single playthrough may skip nodes or end early.
-- English is the canonical documentation and story-source language.
+- Keep repository instructions and technical documentation in English.
+- Keep all player-facing narrative and interface copy in Ukrainian. Preserve canonical Ukrainian dialogue and labels from `Script.md`; use English only for filenames, code symbols, and technical IDs.
 - Keep story data separate from React components and use the stable node and ending IDs from `Script.md`.
 - Track separate relationship values for Olia and Maks, both starting at `50`.
 - Track budget as UAH, starting at `20_000`; do not normalize it to `0–100` or allow it to become negative.
