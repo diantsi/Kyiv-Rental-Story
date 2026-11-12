@@ -1,8 +1,14 @@
 type MainMenuProps = {
+  hasSavedGame: boolean;
+  onContinue: () => void;
   onStart: () => void;
 };
 
-export function MainMenu({ onStart }: MainMenuProps) {
+export function MainMenu({
+  hasSavedGame,
+  onContinue,
+  onStart,
+}: MainMenuProps) {
   return (
     <main className="main-menu">
       <section className="menu-panel" aria-labelledby="game-title">
@@ -12,9 +18,30 @@ export function MainMenu({ onStart }: MainMenuProps) {
           Інтерактивна вебновела про трьох друзів, обмежений бюджет і квартири,
           які майже завжди мають приховане «але».
         </p>
-        <button className="primary-button" type="button" onClick={onStart}>
-          Почати гру
-        </button>
+        <div className="menu-actions">
+          {hasSavedGame ? (
+            <>
+              <button
+                className="primary-button"
+                type="button"
+                onClick={onContinue}
+              >
+                Продовжити
+              </button>
+              <button
+                className="secondary-button"
+                type="button"
+                onClick={onStart}
+              >
+                Почати спочатку
+              </button>
+            </>
+          ) : (
+            <button className="primary-button" type="button" onClick={onStart}>
+              Почати гру
+            </button>
+          )}
+        </div>
       </section>
     </main>
   );

@@ -10,7 +10,7 @@ import {
   walkingSkeletonNodes,
 } from "./walkingSkeleton";
 
-const SAVE_VERSION = 1;
+export const SAVE_VERSION = 1;
 
 const initialFlags: Record<StoryFlag, boolean> = {
   larysa_contact: false,
@@ -20,17 +20,21 @@ const initialFlags: Record<StoryFlag, boolean> = {
   scam_recognized: false,
 };
 
-export const initialGameState: GameState = {
-  nodeId: initialNodeId,
-  beatIndex: 0,
-  oliaRelationship: 50,
-  maksRelationship: 50,
-  budgetUAH: 20_000,
-  stress: 10,
-  flags: initialFlags,
-  choices: [],
-  saveVersion: SAVE_VERSION,
-};
+export function createInitialGameState(): GameState {
+  return {
+    nodeId: initialNodeId,
+    beatIndex: 0,
+    oliaRelationship: 50,
+    maksRelationship: 50,
+    budgetUAH: 20_000,
+    stress: 10,
+    flags: { ...initialFlags },
+    choices: [],
+    saveVersion: SAVE_VERSION,
+  };
+}
+
+export const initialGameState = createInitialGameState();
 
 export type GameAction =
   | { type: "advance" }

@@ -1,19 +1,27 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import {
   gameReducer,
-  initialGameState,
 } from "../story/gameState";
+import { saveGameState } from "../story/gameStorage";
 import { walkingSkeletonNodes } from "../story/walkingSkeleton";
-import type { StoryChoice } from "../story/types";
+import type { GameState, StoryChoice } from "../story/types";
 import { ChoiceList } from "./ChoiceList";
 import { DialogueBox } from "./DialogueBox";
 import { SceneFrame } from "./SceneFrame";
 
-export function GameScreen() {
-  const [state, dispatch] = useReducer(gameReducer, initialGameState);
+type GameScreenProps = {
+  initialState: GameState;
+};
+
+export function GameScreen({ initialState }: GameScreenProps) {
+  const [state, dispatch] = useReducer(gameReducer, initialState);
   const scene = walkingSkeletonNodes[state.nodeId];
   const currentBeat = scene.beats[state.beatIndex];
   const isLastBeat = state.beatIndex === scene.beats.length - 1;
+
+  useEffect(() => {
+    saveGameState(state);
+  }, [state]);
 
   function advanceDialogue() {
     dispatch({ type: "advance" });
