@@ -44,6 +44,7 @@ export const walkingSkeletonNodes: Record<string, StoryNode> = {
       },
     ],
     nextNodeId: "02",
+    effects: { stress: 5 },
   },
   "02": {
     id: "02",
@@ -79,16 +80,31 @@ export const walkingSkeletonNodes: Record<string, StoryNode> = {
         label:
           "Фіксуємо мінімум: окремі кімнати, безпечний будинок, письмові умови й повна сума до виїзду",
         nextNodeId: "03",
+        effects: {
+          oliaRelationship: 5,
+          maksRelationship: 5,
+          stress: -3,
+        },
       },
       {
         id: "02-B",
         label: "Спершу дивимося найдешевше, а комфорт якось владнаємо",
         nextNodeId: "03",
+        effects: {
+          oliaRelationship: -8,
+          maksRelationship: 5,
+          stress: 5,
+        },
       },
       {
         id: "02-C",
         label: "Спершу дивимося найкращі умови, потім якось домовимося про гроші",
         nextNodeId: "03",
+        effects: {
+          oliaRelationship: 5,
+          maksRelationship: -8,
+          stress: 5,
+        },
       },
     ],
   },
