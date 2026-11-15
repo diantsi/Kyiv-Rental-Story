@@ -7,14 +7,8 @@ type ContextSheetProps = {
 
 export function ContextSheet({ scene, onContinue }: ContextSheetProps) {
   return (
-    <section className="context-sheet" aria-labelledby="context-title">
+    <section className="context-sheet" aria-label="Контекст сцени">
       <span className="context-tape" aria-hidden="true" />
-      <p className="context-number">
-        {scene.kind === "ending" ? "Фінал" : "Сцена"} {scene.id}
-      </p>
-      <h1 id="context-title" className="context-title">
-        {scene.title}
-      </h1>
       {(scene.location || scene.time) && (
         <p className="context-meta">
           {scene.location}

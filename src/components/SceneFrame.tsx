@@ -28,10 +28,6 @@ export function SceneFrame({
       ) : (
         <>
           <header className="scene-header">
-            <p className="scene-number">
-              {scene.kind === "ending" ? "Фінал" : "Сцена"} {scene.id}
-            </p>
-            <h1>{scene.title}</h1>
             {(scene.location || scene.time) && (
               <p className="scene-meta">
                 {scene.location}
