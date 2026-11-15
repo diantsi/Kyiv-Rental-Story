@@ -24,6 +24,7 @@ const initialFlags: Record<StoryFlag, boolean> = {
 export function createInitialGameState(): GameState {
   return {
     nodeId: initialNodeId,
+    showingContext: true,
     beatIndex: 0,
     oliaRelationship: 50,
     maksRelationship: 50,
@@ -121,6 +122,7 @@ export function resolveTransition(
       ...state,
       nodeId: transition.insufficientBudgetEndingId,
       beatIndex: 0,
+      showingContext: true,
       choices,
       endingId: transition.insufficientBudgetEndingId,
     };
@@ -134,6 +136,7 @@ export function resolveTransition(
       nodeId: transition.nextNodeId,
       choices,
       beatIndex: 0,
+      showingContext: true,
       endingId: transition.nextNodeId,
     };
   }
@@ -146,6 +149,7 @@ export function resolveTransition(
       nodeId: thresholdEnding,
       choices,
       beatIndex: 0,
+      showingContext: true,
       endingId: thresholdEnding,
     };
   }
@@ -154,6 +158,7 @@ export function resolveTransition(
     ...resolvedState,
     nodeId: transition.nextNodeId,
     beatIndex: 0,
+    showingContext: true,
     choices,
     endingId: undefined,
   };
@@ -167,6 +172,10 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
   }
 
   if (action.type === "advance") {
+    if (state.showingContext) {
+      return { ...state, showingContext: false, beatIndex: 0 };
+    }
+
     const beats = getVisibleBeats(scene, state);
     const isLastBeat = state.beatIndex === beats.length - 1;
 
@@ -186,7 +195,7 @@ export function gameReducer(state: GameState, action: GameAction): GameState {
     });
   }
 
-  if (scene.kind === "ending") {
+  if (scene.kind === "ending" || state.showingContext) {
     return state;
   }
 

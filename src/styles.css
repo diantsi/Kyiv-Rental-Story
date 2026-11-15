@@ -275,3 +275,111 @@ button:focus-visible {
     scroll-behavior: auto !important;
   }
 }
+
+/* Scene context: a sheet of paper centred on the scene background. */
+.scene-frame--context {
+  justify-content: center;
+  align-items: center;
+}
+
+.context-sheet {
+  position: relative;
+  width: min(100%, 38rem);
+  padding: clamp(2rem, 6vw, 3.25rem) clamp(1.5rem, 6vw, 3.25rem);
+  border-radius: 0.25rem;
+  color: #2b2620;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      transparent 0,
+      transparent 1.95rem,
+      rgba(70, 95, 130, 0.14) 1.95rem,
+      rgba(70, 95, 130, 0.14) 2rem
+    ),
+    linear-gradient(160deg, #fbf6ea 0%, #f1e8d4 100%);
+  box-shadow:
+    0 1.5rem 3.5rem rgba(0, 0, 0, 0.45),
+    0 0.2rem 0.5rem rgba(0, 0, 0, 0.25);
+  transform: rotate(-1deg);
+  animation: context-sheet-in 420ms ease-out;
+}
+
+.context-tape {
+  position: absolute;
+  top: -0.85rem;
+  left: 50%;
+  width: 7rem;
+  height: 1.7rem;
+  background: rgba(241, 202, 114, 0.55);
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%) rotate(2deg);
+}
+
+.context-number {
+  margin: 0 0 0.6rem;
+  color: #8a5a14;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.context-title {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.75rem, 5vw, 2.4rem);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.context-meta {
+  margin: 0.6rem 0 0;
+  color: #6b6258;
+  font-size: 0.95rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.context-text {
+  margin: 1.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px dashed rgba(43, 38, 32, 0.3);
+  font-family: "Courier New", Courier, ui-monospace, monospace;
+  font-size: clamp(1rem, 2.4vw, 1.12rem);
+  line-height: 1.75;
+}
+
+.context-button {
+  display: block;
+  min-height: 3rem;
+  margin: 1.75rem 0 0 auto;
+  padding: 0.8rem 1.4rem;
+  border: 1px solid #2b2620;
+  border-radius: 0.75rem;
+  background: #2b2620;
+  color: #fbf6ea;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.context-button:hover {
+  background: #403830;
+}
+
+.context-button:focus-visible {
+  outline-color: #8a5a14;
+}
+
+@keyframes context-sheet-in {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) rotate(-3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .context-sheet {
+    animation: none;
+  }
+}

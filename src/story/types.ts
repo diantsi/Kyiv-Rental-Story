@@ -77,6 +77,8 @@ export type StoryNode = {
 
 export type GameState = {
   nodeId: StoryNodeId;
+  /** True while the scene context sheet is shown before the dialogue beats. */
+  showingContext: boolean;
   beatIndex: number;
   oliaRelationship: number;
   maksRelationship: number;

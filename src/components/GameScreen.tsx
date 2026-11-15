@@ -7,6 +7,7 @@ import { saveGameState } from "../story/gameStorage";
 import { storyNodes } from "../story/story";
 import type { GameState, StoryChoice } from "../story/types";
 import { ChoiceList } from "./ChoiceList";
+import { ContextSheet } from "./ContextSheet";
 import { DialogueBox } from "./DialogueBox";
 import { SceneFrame } from "./SceneFrame";
 
@@ -32,6 +33,14 @@ export function GameScreen({ initialState, onRestart }: GameScreenProps) {
 
   function selectChoice(choice: StoryChoice) {
     dispatch({ type: "choose", choiceId: choice.id });
+  }
+
+  if (state.showingContext) {
+    return (
+      <SceneFrame scene={scene} variant="context">
+        <ContextSheet scene={scene} onContinue={advanceDialogue} />
+      </SceneFrame>
+    );
   }
 
   const showChoices = isLastBeat && scene.kind === "scene" && scene.choices;

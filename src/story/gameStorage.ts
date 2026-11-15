@@ -86,7 +86,9 @@ export function parseGameState(value: unknown): GameState | null {
     !isIntegerInRange(value.budgetUAH, 0, Number.MAX_SAFE_INTEGER) ||
     !isIntegerInRange(value.stress, 0, 100) ||
     !isValidFlags(value.flags) ||
-    !isValidChoices(value.choices)
+    !isValidChoices(value.choices) ||
+    (value.showingContext !== undefined &&
+      typeof value.showingContext !== "boolean")
   ) {
     return null;
   }
@@ -108,6 +110,8 @@ export function parseGameState(value: unknown): GameState | null {
 
   const state: GameState = {
     nodeId: value.nodeId as StoryNodeId,
+    // Saves made before the context screen existed resume in the dialogue.
+    showingContext: value.showingContext === true,
     beatIndex: value.beatIndex as number,
     oliaRelationship: value.oliaRelationship as number,
     maksRelationship: value.maksRelationship as number,
