@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import continueButton from "../assets/continue_button.png";
+import restartButton from "../assets/restart_button.png";
 import startButton from "../assets/start_button.png";
 import { startMenuMusic } from "../audio/sound";
 
@@ -23,18 +25,20 @@ export function MainMenu({
           {hasSavedGame ? (
             <>
               <button
-                className="primary-button"
+                className="image-button"
                 type="button"
+                aria-label="Продовжити"
                 onClick={onContinue}
               >
-                Продовжити
+                <img src={continueButton} alt="" />
               </button>
               <button
-                className="secondary-button"
+                className="image-button image-button--small"
                 type="button"
+                aria-label="Почати спочатку"
                 onClick={onStart}
               >
-                Почати спочатку
+                <img src={restartButton} alt="" />
               </button>
             </>
           ) : (

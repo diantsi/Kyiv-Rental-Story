@@ -18,7 +18,7 @@ import type {
 import { playChooseSound, playSceneMusic, stopSceneMusic } from "../audio/sound";
 import { sceneMusic } from "../story/sceneMusic";
 import { ChoiceList } from "./ChoiceList";
-import { ChangeToast } from "./ChangeToast";
+import { ChangeToast, TOAST_STEP_MS } from "./ChangeToast";
 import { EndingSummary } from "./EndingSummary";
 import { StatusBar } from "./StatusBar";
 import { diffState, flashTone, type StateChange } from "../story/stateChanges";
@@ -134,7 +134,7 @@ export function GameScreen({ initialState, onRestart, onMenu, onShowTitle }: Gam
     setChanges(diff);
     const tone = flashTone(diff);
     setFlash(tone ? { tone, id: Date.now() } : null);
-    const timer = window.setTimeout(() => setChanges([]), 5000);
+    const timer = window.setTimeout(() => setChanges([]), diff.length * TOAST_STEP_MS + 200);
     return () => window.clearTimeout(timer);
   }, [state]);
 
@@ -161,8 +161,13 @@ export function GameScreen({ initialState, onRestart, onMenu, onShowTitle }: Gam
       {flash && <div className={`flash flash--${flash.tone}`} key={flash.id} aria-hidden="true" />}
             <div className="hud-corner">
         <StatusBar state={state} />
-        <button className="menu-button" type="button" onClick={onMenu}>
-          ☰ Меню
+        <button
+          className={`menu-button${import.meta.env.DEV ? " menu-button--dev" : ""}`}
+          type="button"
+          onClick={onMenu}
+        >
+          <span className="menu-button__icon" aria-hidden="true" />
+          Меню
         </button>
       </div>
       <ChangeToast changes={changes} />
@@ -309,7 +314,7 @@ export function GameScreen({ initialState, onRestart, onMenu, onShowTitle }: Gam
         </section>
       ) : (
         <>
-          {!chatActive && (
+          {!chatActive && !chatOptions && (
             <DialogueBox
               beat={currentBeat}
               currentBeat={beatIndex + 1}
@@ -326,13 +331,25 @@ export function GameScreen({ initialState, onRestart, onMenu, onShowTitle }: Gam
             scene.kind === "ending" ? (
               <EndingSummary scene={scene} state={state} onRestart={onRestart} />
             ) : (
-              <section className="ending-panel" aria-labelledby="ending-summary">
-                <h2 id="ending-summary">Наслідок</h2>
-                <p>{scene.consequence}</p>
-                <button className="primary-button" type="button" onClick={onRestart}>
-                  Почати спочатку
-                </button>
-              </section>
+              <div className="ending-overlay">
+                <section
+                  className="ending-card"
+                  role="dialog"
+                  aria-modal="true"
+                  aria-labelledby="ending-summary"
+                >
+                  <h2 id="ending-summary">Наслідок</h2>
+                  <div className="ending-card__ornament" aria-hidden="true">✦</div>
+                  <p className="ending-card__text">{scene.consequence}</p>
+                  <button
+                    className="primary-button ending-card__button"
+                    type="button"
+                    onClick={onRestart}
+                  >
+                    Почати спочатку
+                  </button>
+                </section>
+              </div>
             )
           )}
         </>

@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import callScreen from "../assets/larysa_call.png";
 import unknownCallScreen from "../assets/unknown_call.png";
 import messageScreen from "../assets/larysa_message.png";
+import lockScreen from "../assets/phone_lock.png";
+import notification from "../assets/notification_larysa.png";
 import { startPhoneRinging, stopPhoneRinging } from "../audio/sound";
 
 type PhoneCallProps = {
@@ -15,7 +17,6 @@ type PhoneCallProps = {
 };
 
 const RING_MS = 2600;
-const MESSAGE_MS = 3600;
 
 /**
  * Incoming call from Larysa. The phone is a picture, the buttons are real
@@ -23,7 +24,9 @@ const MESSAGE_MS = 3600;
  */
 export function PhoneCall({ onAccept, autoHangUp, autoAnswer, caller = "larysa" }: PhoneCallProps) {
   const [ringKey, setRingKey] = useState(0);
-  const [showMessage, setShowMessage] = useState(false);
+  // Larysa's message skips the call screen: the lock screen buzzes, a banner arrives, then the message.
+  const [stage, setStage] = useState<"ring" | "lock" | "message">(autoHangUp ? "lock" : "ring");
+  const showMessage = stage === "message";
   const onAcceptRef = useRef(onAccept);
   onAcceptRef.current = onAccept;
 
@@ -34,52 +37,70 @@ export function PhoneCall({ onAccept, autoHangUp, autoAnswer, caller = "larysa" 
   }, [autoAnswer]);
 
   useEffect(() => {
-    if (!autoHangUp) return;
-    const timer = window.setTimeout(
-      () => (showMessage ? onAcceptRef.current() : setShowMessage(true)),
-      showMessage ? MESSAGE_MS : RING_MS,
-    );
+    if (!autoHangUp || stage !== "ring") return;
+    const timer = window.setTimeout(() => setStage("lock"), RING_MS);
     return () => window.clearTimeout(timer);
-  }, [autoHangUp, showMessage]);
+  }, [autoHangUp, stage]);
 
-  // The ringtone plays while the phone rings; declining restarts it, the message stops it.
+  // The lock screen vibrates when the notification arrives.
   useEffect(() => {
-    if (showMessage) return;
+    if (stage !== "lock") return;
+    try {
+      navigator.vibrate?.([200, 120, 200]);
+    } catch {
+      /* vibration is optional */
+    }
+  }, [stage]);
+
+  // The ringtone plays while the phone rings; declining restarts it, the lock screen stops it.
+  useEffect(() => {
+    if (stage !== "ring") return;
     startPhoneRinging();
     return stopPhoneRinging;
-  }, [showMessage, ringKey]);
+  }, [stage, ringKey]);
 
-  // Auto mode: a click skips ahead.
+  // Auto mode: a click skips the ring. The lock and message screens wait for the player.
   function skip() {
     if (autoAnswer) {
       onAccept();
       return;
     }
-    if (!autoHangUp) return;
-    if (showMessage) onAccept();
-    else setShowMessage(true);
+    if (autoHangUp && stage === "ring") setStage("lock");
   }
 
+  const label =
+    stage === "lock"
+      ? "Нове повідомлення від рієлторки Лариси"
+      : showMessage
+        ? "Повідомлення від рієлторки Лариси"
+        : caller === "unknown"
+          ? "Вхідний дзвінок: невідомий номер"
+          : "Вхідний дзвінок: рієлторка Лариса";
+
   return (
-    <div
-      className="phone-call"
-      role="dialog"
-      aria-modal="true"
-      aria-label={
-        showMessage
-          ? "Повідомлення від рієлторки Лариси"
-          : caller === "unknown"
-            ? "Вхідний дзвінок: невідомий номер"
-            : "Вхідний дзвінок: рієлторка Лариса"
-      }
-      onClick={skip}
-    >
+    <div className="phone-call" role="dialog" aria-modal="true" aria-label={label} onClick={skip}>
       <div
-        className={`phone-call__phone${showMessage ? " phone-call__phone--message" : ""}`}
-        key={`${ringKey}-${showMessage}`}
+        className={`phone-call__phone${
+          stage === "message" ? " phone-call__phone--message" : ""
+        }${stage === "lock" ? " phone-call__phone--lock" : ""}`}
+        key={`${ringKey}-${stage}`}
       >
-        <img src={showMessage ? messageScreen : caller === "unknown" ? unknownCallScreen : callScreen} alt="" />
-        {!autoHangUp && !autoAnswer && (
+        <img
+          src={
+            stage === "lock"
+              ? lockScreen
+              : showMessage
+                ? messageScreen
+                : caller === "unknown"
+                  ? unknownCallScreen
+                  : callScreen
+          }
+          alt=""
+        />
+        {stage === "lock" && (
+          <img className="phone-call__banner" src={notification} alt="" />
+        )}
+        {stage === "ring" && !autoHangUp && !autoAnswer && (
           <>
             <button
               className="phone-call__button phone-call__button--decline"
@@ -96,6 +117,16 @@ export function PhoneCall({ onAccept, autoHangUp, autoAnswer, caller = "larysa" 
           </>
         )}
       </div>
+      {stage === "lock" && (
+        <button className="primary-button phone-call__view" type="button" onClick={() => setStage("message")}>
+          Переглянути
+        </button>
+      )}
+      {showMessage && (
+        <button className="primary-button phone-call__ignore" type="button" onClick={onAccept}>
+          Проігнорувати
+        </button>
+      )}
     </div>
   );
 }

@@ -20,10 +20,17 @@ export function EndingSummary({ scene, state, onRestart }: EndingSummaryProps) {
     .filter((label): label is string => Boolean(label));
 
   return (
-    <section className="ending-panel ending-summary" aria-labelledby="ending-summary">
+    <div className="ending-overlay">
+    <section
+      className="ending-card ending-summary"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="ending-summary"
+    >
       <p className="ending-summary__eyebrow">Фінал</p>
       <h2 id="ending-summary">{scene.title}</h2>
-      <p>{scene.consequence}</p>
+      <div className="ending-card__ornament" aria-hidden="true">✦</div>
+      <p className="ending-card__text">{scene.consequence}</p>
 
       <dl className="ending-summary__stats">
         <div>
@@ -55,9 +62,10 @@ export function EndingSummary({ scene, state, onRestart }: EndingSummaryProps) {
         </>
       )}
 
-      <button className="primary-button" type="button" onClick={onRestart}>
+      <button className="primary-button ending-card__button" type="button" onClick={onRestart}>
         Почати спочатку
       </button>
     </section>
+    </div>
   );
 }

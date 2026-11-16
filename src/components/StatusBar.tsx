@@ -14,7 +14,7 @@ export function StatusBar({ state }: StatusBarProps) {
   return (
     <aside className="status-bar" aria-label="Показники">
       <p className="status-bar__budget">
-        <span className="status-bar__label">Бюджет</span>
+        <span className="status-bar__label visually-hidden">Бюджет</span>
         <strong className="status-bar__value" key={state.budgetUAH}>
           {formatUAH(state.budgetUAH)}
         </strong>
@@ -28,7 +28,7 @@ export function StatusBar({ state }: StatusBarProps) {
         aria-valuenow={Math.min(state.stress, CRISIS_STRESS)}
         aria-valuetext={`${state.stress} із ${CRISIS_STRESS}`}
       >
-        <span className="status-bar__label">Стрес</span>
+        <span className="status-bar__label visually-hidden">Стрес</span>
         <span className="status-bar__track">
           <span
             className={`status-bar__fill status-bar__fill--${level}`}
