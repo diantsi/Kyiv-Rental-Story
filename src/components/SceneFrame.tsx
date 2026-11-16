@@ -64,6 +64,9 @@ export function SceneFrame({
                       }`}
                       key={index}
                     >
+                      {bubble.image && (
+                        <img className="chat-phone__image" src={bubble.image} alt="Фото паспорта" />
+                      )}
                       {bubble.text}
                     </p>
                   ))}

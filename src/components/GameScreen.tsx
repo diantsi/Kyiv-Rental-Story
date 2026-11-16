@@ -24,7 +24,7 @@ import { StatusBar } from "./StatusBar";
 import { diffState, flashTone, type StateChange } from "../story/stateChanges";
 import { ContextSheet } from "./ContextSheet";
 import { getBeatSprite } from "../story/characterSprites";
-import { laptopIntroBackground } from "../story/sceneBackgrounds";
+import { chatImages, laptopIntroBackground } from "../story/sceneBackgrounds";
 import { CallEnded } from "./CallEnded";
 import { PhoneCall } from "./PhoneCall";
 import { ListingModal } from "./ListingModal";
@@ -227,7 +227,9 @@ export function GameScreen({ initialState, onRestart, onMenu, onShowTitle }: Gam
   const chatSpeaker = chatConfig?.speaker;
   const chatMessages: ChatBubble[] | undefined = chatSpeaker
     ? beats.slice(0, beatIndex + 1).flatMap((beat, index) => [
-        ...(beat.speaker === chatSpeaker ? [{ text: beat.text }] : []),
+        ...(beat.speaker === chatSpeaker
+          ? [{ text: beat.text, image: beat.image && chatImages[beat.image] }]
+          : []),
         ...(chatReplies[index] ?? []),
       ])
     : undefined;

@@ -1443,6 +1443,13 @@ button:focus-visible {
   animation: chat-bubble-in 0.3s ease-out;
 }
 
+.chat-phone__image {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.45em;
+  border-radius: 0.7em;
+}
+
 .chat-phone__bubble--mine {
   align-self: flex-end;
   border-radius: 1.1em 1.1em 0.3em 1.1em;

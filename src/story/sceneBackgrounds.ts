@@ -24,6 +24,7 @@ import scene19 from "../assets/scene_19.jpeg";
 import scene20 from "../assets/scene_20.jpeg";
 import scene21 from "../assets/scene_21.jpeg";
 import scene22 from "../assets/scene_22.jpeg";
+import chatPassport from "../assets/chat_passport.png";
 
 /** Background per node: scene_01–13 are scenes in story order, scene_14–22 are F1–F9. */
 export const sceneBackgrounds: Record<StoryNodeId, string> = {
@@ -60,4 +61,9 @@ export const laptopIntroBackground = laptopScreen;
 /** Alternative backgrounds a beat or a context sheet can switch to. */
 export const beatBackdrops = {
   arrival: scene05Arrival,
+} as const;
+
+/** Pictures a chat message can carry. */
+export const chatImages = {
+  passport: chatPassport,
 } as const;

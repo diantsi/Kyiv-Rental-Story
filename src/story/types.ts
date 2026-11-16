@@ -7,6 +7,8 @@ export type ChatReply = {
 
 export type ChatBubble = {
   text: string;
+  /** Picture attached to the message (resolved image URL). */
+  image?: string;
   /** Marta's own message (right side). */
   mine?: boolean;
   /** Appears a moment later, like a typed answer. */
@@ -81,6 +83,8 @@ export type DialogueBeat = {
   text: string;
   /** Optional alternative background for this beat (key from beatBackdrops). */
   backdrop?: "arrival";
+  /** Picture sent with a chat message (key from chatImages). */
+  image?: "passport";
   /** Optional sprite expression for the speaker; defaults to neutral. */
   mood?: SpriteMood;
   /** Show the beat only if a flag has the given value, or a choice was (not) made earlier. */
