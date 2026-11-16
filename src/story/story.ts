@@ -59,7 +59,7 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
     location: "Кухня гуртожитку",
     time: "Того ж вечора, 20:00",
     description:
-      "На столі лежать три аркуші. В Олі — «окрема кімната, інтернет, ванна, укриття». У Макса — «до 15 000, без зайвих платежів». Марта відкриває карту Києва й намагається скласти один список замість трьох.",
+      "На столі лежать три аркуші. В Олі — «окрема кімната, інтернет, ванна, укриття». У Макса — «до 20 000, без зайвих платежів». Марта відкриває карту Києва й намагається скласти один список замість трьох.",
     consequence:
       "Формується початкова позиція Марти. Вона впливатиме на те, чи повірять друзі її подальшим аргументам.",
     visual: { backgroundColor: "#26302d" },
@@ -95,7 +95,7 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
       },
       {
         id: "02-B",
-        label: "Спершу дивимося найдешевше, а комфорт якось владнаємо",
+        label: "Спершу дивимося дешевші варіанти, а комфорт якось самі влаштуємо",
         nextNodeId: "03",
         effects: { oliaRelationship: -8, maksRelationship: 5, stress: 5 },
       },
@@ -168,7 +168,7 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
     ],
     choices: [
       { id: "04L-A", label: "Погодитися на перегляд", nextNodeId: "05L", effects: { oliaRelationship: -3, maksRelationship: 3, stress: 6 } },
-      { id: "04L-B", label: "Відповісти, що підміна оголошення й пошкоджений будинок не підходять, та завершити дзвінок", nextNodeId: "06I", effects: { oliaRelationship: 4, maksRelationship: -3, stress: -2 } },
+      { id: "04L-B", label: "Відповісти, що підміна оголошення й пошкоджений будинок не підходять, та завершити дзвінок", nextNodeId: "06I", effects: { oliaRelationship: 4, maksRelationship: 0, stress: -2 } },
     ],
   },
   "05L": {
@@ -178,12 +178,12 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
     location: "Пошкоджена багатоповерхівка на Лук’янівці; квартира",
     time: "Вівторок, 09:05",
     description:
-      "Біля входу видно закриту частину двору й пошкоджений фасад сусіднього під’їзду. Ліфт доїжджає лише до дванадцятого поверху. У квартирі три кімнати, але одна прохідна. У ванній стоїть стара ванна, під нею калюжа, на стіні темна пляма. Найближче укриття — за десять хвилин.",
+      "Біля входу видно закриту частину двору й пошкоджений фасад сусіднього під’їзду. Ліфт доїжджає лише до дванадцятого поверху. У квартирі три кімнати, але одна прохідна. У ванній кімнаті стоїть стара ванна, під нею калюжа, на стіні темна пляма. Найближче укриття — за десять хвилин.",
     consequence:
       "Оренда завершує пошук поганим, але не шахрайським фіналом. Відмова зберігає гроші, однак Лариса продовжує телефонувати.",
     visual: { backgroundColor: "#302821", contextBackdrop: "arrival" },
     beats: [
-      { speaker: "Оля", text: "Це точно той будинок? Фасад виглядає так, ніби тут щось вибухнуло.", mood: "shocked", backdrop: "arrival" },
+      { speaker: "Оля", text: "Це точно той будинок? Я думаю, він не зовсім придатний для життя.", mood: "shocked", backdrop: "arrival" },
       { speaker: "Марта", text: "Адреса збігається. Здається, це той самий будинок.", mood: "confused", backdrop: "arrival" },
       { speaker: "Макс", text: "«Косметичні особливості фасаду». Мабуть, це про дірку в стіні.", mood: "happy", backdrop: "arrival" },
       { speaker: "Лариса", text: "Ой, ось і мої перепілочки! Не стійте на вулиці, ластівочки, заходьте, заходьте! Другий під’їзд, там усе зовсім-зовсім інакше!", mood: "showing", backdrop: "arrival" },
@@ -257,6 +257,8 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
       { id: "07I-A", label: "Підписати договір як є, щоб не втратити квартиру", nextNodeId: "F2", effects: { maksRelationship: 5, oliaRelationship: -9, stress: 12, budgetUAH: -18_000 } },
       { id: "07I-B", label: "Вимагати вписати всі платежі, порядок візитів і повернення застави; після відмови піти", nextNodeId: "08O", effects: { oliaRelationship: 5, maksRelationship: 2, stress: 2, flags: { contract_checked: true } } },
       { id: "07I-C", label: "Сказати Олі, що вона чіпляється до слів, але все одно відмовитися через додаткові 5 000 грн", nextNodeId: "08O", effects: { oliaRelationship: -10, maksRelationship: 3, stress: 8 } },
+      { id: "07I-D", label: "Засумніватись в тому, чи не придумає власник на ходу ще більше умов. Ввічливо послати рієлтора", nextNodeId: "08O", effects: { oliaRelationship: 5, maksRelationship: 2, stress: 0 } }
+
     ],
   },
   "08O": {
@@ -281,9 +283,9 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
       { speaker: "Марта", text: "Оксано, я вас почула." },
     ],
     choices: [
-      { id: "08O-A", label: "Чесно назвати вік, роботу й навчання", nextNodeId: "10S", effects: { oliaRelationship: 3, maksRelationship: -2, stress: 5 } },
+      { id: "08O-A", label: "Чесно назвати вік, роботу й навчання", nextNodeId: "10S", effects: { oliaRelationship: 3, maksRelationship: -2, stress: 3 } },
       { id: "08O-B", label: "Сказати, що всім по двадцять сім і всі працюють повний день", nextNodeId: "09O", effects: { maksRelationship: 4, oliaRelationship: -7, stress: 6, flags: { lied_to_oksana: true } } },
-      { id: "08O-C", label: "Відмовитися відповідати на питання про батьків і завершити розмову", nextNodeId: "10S", effects: { oliaRelationship: 5, maksRelationship: -4, stress: -1 } },
+      { id: "08O-C", label: "Відмовитися відповідати на питання і завершити розмову", nextNodeId: "10S", effects: { oliaRelationship: 5, maksRelationship: -4, stress: -1 } },
     ],
   },
   "09O": {
@@ -319,7 +321,7 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
     location: "Груповий чат і Viber на телефоні Марти",
     time: "Четвер, 21:15",
     description:
-      "Увечері Марта бачить оголошення: сучасна трикімнатна квартира на Подолі за 10 000 грн. «Власниця» пише, що ремонт робили для доньки, але та виїхала за кордон. Після кількох доброзичливих повідомлень жінка просить 5 000 грн, щоб забронювати квартиру до завтрашнього перегляду. Надсилає фото паспорта, але відмовляється від відеодзвінка.",
+      "Увечері Марта бачить оголошення: сучасна трикімнатна квартира на Подолі за 10 000 грн. «Власниця» пише, що ремонт робили для доньки, але та виїхала за кордон.",
     consequence:
       "Переказ коштів завершує гру негайно: команда втрачає гроші й уже не має достатнього резерву для безпечного переїзду. Обережна дія зберігає шанс на фінальну пропозицію.",
     visual: {
@@ -336,8 +338,8 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
           // After Olia asks to see the flat live (beat 3); Marta's next line reports the answer.
           3: [
             { text: "Можна відеодзвінок із квартири?", answer: "Зараз я в селі, зв’язок слабкий." },
-            { text: "Покажіть, будь ласка, квартиру наживо.", answer: "Зараз я в селі, зв’язок слабкий." },
-            { text: "А можна побачити її хоча б у відео?", answer: "Зараз я в селі, зв’язок слабкий." },
+            { text: "Покажіть, будь ласка, квартиру наживо.", answer: "Зараз я в селі, давайте домовимось про зустріч після завдатку." },
+            { text: "А можна побачити її хоча б у відео?", answer: "Зараз я в селі, зв’язок слабкий і відео не надсилається." },
           ],
         },
       },
@@ -345,16 +347,17 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
     beats: [
       { speaker: "Власниця з Viber", text: "Ми з чоловіком порадилися. Ви справляєте враження дуже хороших людей." },
       { speaker: "Макс", text: "Вона це зрозуміла з трьох повідомлень?", mood: "shocked" },
-      { speaker: "Власниця з Viber", text: "Я готова відмовити іншим. Перекиньте п’ять тисяч бронювання, і оголошення одразу видаляю." },
+      { speaker: "Власниця з Viber", text: "Готова віддати вам цю квартиру і відмовити іншим. Давайте ви перекинете п’ять тисяч бронювання, і оголошення одразу видаляю." },
       { speaker: "Оля", text: "Попроси показати квартиру наживо", mood: "thinking" },
       { speaker: "Марта", text: "Вона каже, що зараз у селі й зв’язок слабкий.", mood: "confused" },
       { speaker: "Оля", text: "Ремонт для доньки, усі за кордоном... Десь я це вже чула. У вівторок, під фото з двома різними кухнями.", mood: "skeptical" },
+      { speaker: "Марта", text: "Ну вона кинула фото паспорта", mood: "confused" },
       { speaker: "Макс", text: "Фото паспорта нічого не доводить. Воно може бути чиє завгодно.", mood: "thinking" },
       { speaker: "Власниця з Viber", text: "Вирішіть за десять хвилин, бо люди вже готові платити." },
     ],
     choices: [
       { id: "10S-A", label: "Переказати 5 000 грн, щоб не втратити дешеву квартиру", nextNodeId: "F3", effects: { budgetUAH: -5_000, stress: 20 } },
-      { id: "10S-B", label: "Попросити відеодзвінок із квартири, документ про право власності й ім’я отримувача картки", nextNodeId: "11N", effects: { oliaRelationship: 4, maksRelationship: 4, stress: 3, flags: { scam_recognized: true } } },
+      { id: "10S-B", label: "Сказати що готові платити гроші лише вживу і після огляду квартири", nextNodeId: "11N", effects: { oliaRelationship: 4, maksRelationship: 4, stress: 3, flags: { scam_recognized: true } } },
       { id: "10S-C", label: "Одразу заблокувати контакт і поскаржитися на оголошення", nextNodeId: "11N", effects: { oliaRelationship: 2, maksRelationship: 3, stress: -2, flags: { scam_recognized: true } } },
     ],
   },
@@ -383,7 +386,7 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
       { speaker: "Лариса", text: "Алло, це Ларисочка! Марточко, перепілочко моя, я знайшла для вас…", mood: "showing", condition: { flag: "larysa_contact" } },
       { speaker: "Марта", text: "Задовбала!", mood: "angry", condition: { flag: "larysa_contact" } },
       { speaker: "Андрій", text: "Можете спершу прочитати договір. Перегляд о шостій, рішення не зобов’язані давати на місці.", mood: "happy" },
-      { speaker: "Макс", text: "Ще й без таймера. Підозріло нормально.", mood: "happy" },
+      { speaker: "Макс", text: "Ще й без тиску. Підозріло нормально.", mood: "happy" },
       { speaker: "Оля", text: "Нормальна квартира знайшлася саме тоді, коли нам нічим за неї платити.", mood: "sad", condition: { flag: "lied_to_oksana" } },
     ],
     nextNodeId: "12N",
@@ -567,9 +570,9 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
       "Без частки Макса спільна квартира стає недоступною. Марта й Оля погоджуються на переселення, а Макс винаймає кімнату сам.",
     visual: { backgroundColor: "#29272a" },
     beats: [
-      { speaker: "Макс", text: "Я не проти комфорту. Я проти того, щоб кожна розмова про гроші звучала як жадібність.", mood: "angry" },
+      { speaker: "Макс", text: "Я не проти комфорту. Але я не готовий платити оверпрайс.", mood: "angry" },
       { speaker: "Марта", text: "Ми ще можемо знайти баланс.", mood: "sad" },
-      { speaker: "Макс", text: "Баланс — це коли мій ліміт теж умова, а не перешкода. Я не потягну ваш варіант і не хочу позичати.", mood: "angry" },
+      { speaker: "Макс", text: "Баланс — це коли ви враховуєте мій бюджет. Я не потягну ваш варіант і не хочу позичати.", mood: "angry" },
       { speaker: "Оля", text: "Можна було сказати раніше.", mood: "annoyed" },
       { speaker: "Макс", text: "Я казав. Просто це не впливало на рішення.", mood: "angry" },
     ],
@@ -610,8 +613,8 @@ export const storyNodes: Record<StoryNodeId, StoryNode> = {
       { speaker: "Марта", text: "Ми не знайшли квартиру, але хоча б не підписали те, чого не розуміли." },
       { speaker: "Макс", text: "І ще мінус дві тисячі за таксі до квартири, якої в нас не могло бути.", mood: "sheepish", condition: { flag: "lied_to_oksana" } },
       { speaker: "Макс", text: "Зате гроші ми не втратили.", mood: "sheepish", condition: { flag: "lied_to_oksana", equals: false } },
-      { speaker: "Оля", text: "Наступний пошук почнемо не з оголошень. Почнемо з бюджету й правил." },
-      { speaker: "Марта", text: "І без брехні про вік.", condition: { flag: "lied_to_oksana" } },
+      { speaker: "Оля", text: "Можливо треба більше заробляти" },
+      { speaker: "Макс", text: "А може ми просто занадто різні, щоб жити разом", condition: { flag: "lied_to_oksana" } },
     ],
   },
 };

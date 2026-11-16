@@ -8,15 +8,15 @@ export const choiceReactions: Record<string, DialogueBeat[]> = {
   // 02 — principle of the search
   "02-A": [
     { speaker: "Оля", text: "Нарешті «безпека» стоїть першим пунктом, а не «як вийде».", mood: "happy" },
-    { speaker: "Макс", text: "«Повна сума до виїзду» — це мій улюблений пункт. Ніяких сюрпризів у гаманці.", mood: "happy" },
+    { speaker: "Макс", text: "«Повна сума до виїзду» — це хороший пункт. Ніяких сюрпризів у гаманці.", mood: "happy" },
   ],
   "02-B": [
-    { speaker: "Макс", text: "Нарешті розмова про гроші, а не про «атмосферу».", mood: "happy" },
+    { speaker: "Макс", text: "Нарешті доросла розмова про гроші, а не про «атмосферу».", mood: "happy" },
     { speaker: "Оля", text: "Тобто мій комфорт — це «якось владнається»? Дякую, Марто.", mood: "annoyed" },
   ],
   "02-C": [
-    { speaker: "Оля", text: "Ось це я розумію. Спочатку умови, а потім торгуватимемось.", mood: "happy" },
-    { speaker: "Макс", text: "«Якось домовимося про гроші». Це та сама фраза, після якої я їм гречку без нічого.", mood: "sheepish" },
+    { speaker: "Оля", text: "Правильно, хороші умови впливають на ментальне здоров'я.", mood: "happy" },
+    { speaker: "Макс", text: "Я сумніваюсь, що голодування позитивно вплине на моє здоровʼя", mood: "angry" },
   ],
 
   // 03 — the first listing
@@ -32,7 +32,7 @@ export const choiceReactions: Record<string, DialogueBeat[]> = {
   // 04L — Larysa on the phone
   "04L-A": [
     { speaker: "Лариса", text: "Ой, чудово, мої ластівочки! Я вже вибігаю, через двадцять хвилиночок чекайте біля під’їзду!", mood: "showing" },
-    { speaker: "Оля", text: "Двадцять хвилин? Ми їй навіть адреси не називали.", mood: "thinking" },
+    { speaker: "Оля", text: "Двадцять хвилин? Ми тільки погодитись встигли", mood: "thinking" },
   ],
   "04L-B": [
     { speaker: "Марта", text: "Підміна оголошення й пошкоджений будинок нам не підходять. До побачення.", mood: "angry" },
@@ -89,6 +89,14 @@ export const choiceReactions: Record<string, DialogueBeat[]> = {
     { speaker: "Макс", text: "Оце логіка. Спершу докоряє, потім усе одно робить по-твоєму.", mood: "happy" },
   ],
 
+    "07I-D": [
+    { speaker: "Марта", text: "Не подобаються мені ці непрозорі умови, а якщо йому раптом захочеться повісити на нас клінінг всього підʼїзду за ще більшу суму.", mood: "confused" },
+    { speaker: "Макс", text: "Окей, це резонно. Можемо попасти на більші гроші", mood: "sheepish" },
+    { speaker: "Оля", text: "Я рада, що ви розумієте мене.", mood: "shocked" },
+    { speaker: "Марта", text: "За що ми маємо платити вам комісію, якщо ви не можете нам навіть нормальний договір дати. Ми йдемо.", mood: "angry" },
+    { speaker: "Ігнат", text: "Ой какіє ви дотошні! Там під двєрью вже сємья з собакою стоїть, у них і собака платоспособна!", mood: "showing" },
+  ],
+
   // 08O — Oksana
   "08O-A": [
     { speaker: "Марта", text: "Нам по двадцять один, двадцять два. Працюємо частково, навчаємося.", mood: "thinking" },
@@ -102,7 +110,7 @@ export const choiceReactions: Record<string, DialogueBeat[]> = {
     { speaker: "Макс", text: "Зате спрацювало. Принаймні поки що.", mood: "sheepish" },
   ],
   "08O-C": [
-    { speaker: "Марта", text: "Питання про наших батьків надто особисте. Ми завершуємо розмову.", mood: "angry" },
+    { speaker: "Марта", text: "Якийсь ейджизм. Ми завершуємо розмову.", mood: "angry" },
     { speaker: "Оксана", text: "Як хочете. Охочих багато.", mood: "angry" },
     { speaker: "Оля", text: "Нарешті хтось сказав їй це прямо.", mood: "happy" },
   ],
@@ -114,7 +122,7 @@ export const choiceReactions: Record<string, DialogueBeat[]> = {
     { speaker: "Оля", text: "Це шахрайство. Я не знаю, як ти не бачиш.", mood: "shocked" },
   ],
   "10S-B": [
-    { speaker: "Марта", text: "Пишу: покажіть, будь ласка, квартиру по відео, документ про право власності й ім’я отримувача картки.", mood: "thinking" },
+    { speaker: "Марта", text: "Пишу: ми готові оплатити квартиру лише після огляду вживу.", mood: "thinking" },
     { speaker: "Макс", text: "Чат зник. Вона видалила чат.", mood: "shocked" },
     { speaker: "Оля", text: "Тепер усе зрозуміло.", mood: "happy" },
   ],
@@ -139,8 +147,8 @@ export const choiceReactions: Record<string, DialogueBeat[]> = {
   "12N-C": [
     { speaker: "Марта", text: "Вибачте, але нам не підходить: надто несучасна.", mood: "angry" },
     { speaker: "Андрій", text: "Ваше право. Дякую, що були чесні.", mood: "thinking" },
-    { speaker: "Оля", text: "Серйозно? Через ремонт?", mood: "shocked" },
-    { speaker: "Макс", text: "Іноді «нормально» — це ворог «ідеально».", mood: "sheepish" },
+    { speaker: "Макс", text: "Серйозно? Через ремонт?", mood: "shocked" },
+    { speaker: "Оля", text: "Можливо знайдемо щось краще.", mood: "sheepish" },
   ],
 
   // 13N — signing
