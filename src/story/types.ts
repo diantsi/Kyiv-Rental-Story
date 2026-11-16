@@ -18,6 +18,8 @@ export type SceneVisual = {
   backgroundImage?: string;
   /** Optional looping-free visual effect played when the scene context appears. */
   effect?: "lamp-flicker";
+  /** Marta is dialing: ringback tones play when the scene context appears. */
+  callingTone?: boolean;
   /** Alternative background for the context sheet (key from beatBackdrops). */
   contextBackdrop?: "arrival";
   /** Scene has an in-world listing page: laptop intro + "view listing" button. */

@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
-import { startTextWriting, stopTextWriting } from "../audio/sound";
+import {
+  startCallingSound,
+  startTextWriting,
+  stopCallingSound,
+  stopTextWriting,
+} from "../audio/sound";
 import { lampOffBackground } from "../story/sceneBackgrounds";
 import type { StoryNode } from "../story/types";
 
@@ -38,6 +43,14 @@ export function ContextSheet({ scene, onContinue }: ContextSheetProps) {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, [showTitle]);
+
+  // Ringback tones while Marta dials; they stop once the sheet is left (someone answered).
+  const callingTone = Boolean(scene.visual?.callingTone);
+  useEffect(() => {
+    if (!callingTone) return;
+    startCallingSound();
+    return stopCallingSound;
+  }, [scene.id, callingTone]);
 
   // Preload the lights-off picture while the location card is on screen.
   useEffect(() => {

@@ -1,11 +1,12 @@
 import chooseSoundUrl from "../../sound/choose_sound.wav";
-import menuMusicUrl from "../../sound/menu_background_music.wav";
+import menuMusicUrl from "../../sound/menu_background_music.mp3";
 import textWritingUrl from "../../sound/text_writing.mp3";
 import phoneRingingUrl from "../../sound/phone_ringing.mp3";
-import anxiousMusicUrl from "../../sound/anxious_background_music.wav";
+import callingSoundUrl from "../../sound/calling_sound.mp3";
+import anxiousMusicUrl from "../../sound/anxious_background_music.mp3";
 import mainMusicUrl from "../../sound/main_theme_music.mp3";
 import positiveMusicUrl from "../../sound/positive_background_music.mp3";
-import sadMusicUrl from "../../sound/sad_background_music.wav";
+import sadMusicUrl from "../../sound/sad_background_music.mp3";
 import type { MusicTrack } from "../story/sceneMusic";
 
 const SCENE_MUSIC_VOLUME = 0.5;
@@ -82,6 +83,26 @@ export function playChooseSound() {
 
 textWriting.loop = true;
 
+const callingSound = new Audio(callingSoundUrl);
+callingSound.volume = 0.8;
+const CALLING_REPEATS = 2;
+let callingLeft = 0;
+callingSound.addEventListener("ended", () => {
+  callingLeft -= 1;
+  if (callingLeft > 0) void play(callingSound);
+});
+
+/** Plays the single ringback tone three times in a row. */
+export function startCallingSound() {
+  callingLeft = CALLING_REPEATS;
+  void play(callingSound);
+}
+
+export function stopCallingSound() {
+  callingLeft = 0;
+  callingSound.pause();
+}
+
 const phoneRinging = new Audio(phoneRingingUrl);
 phoneRinging.loop = true;
 phoneRinging.volume = 0.8;
@@ -110,7 +131,7 @@ export function stopTextWriting() {
  */
 export function unlockAudio() {
   void play(menuMusic);
-  const others = [chooseSound, textWriting, phoneRinging, ...Object.values(sceneTracks)];
+  const others = [chooseSound, textWriting, phoneRinging, callingSound,...Object.values(sceneTracks)];
   for (const audio of others) {
     audio.muted = true;
     void audio
