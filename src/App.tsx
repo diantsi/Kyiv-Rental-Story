@@ -15,6 +15,8 @@ export function App() {
   const [savedGame] = useState(loadGameState);
   const [activeGame, setActiveGame] = useState<GameState | null>(null);
   const [gameSession, setGameSession] = useState(0);
+  // Dev only: title screen opened from the dev panel; the game stays mounted.
+  const [titlePreview, setTitlePreview] = useState(false);
 
   function startNewGame() {
     clearGameState();
@@ -43,11 +45,30 @@ export function App() {
     );
   }
 
+  const showTitle = import.meta.env.DEV && titlePreview;
+
   return (
-    <GameScreen
-      key={gameSession}
-      initialState={activeGame ?? createInitialGameState()}
-      onRestart={startNewGame}
-    />
+    <>
+      <div hidden={showTitle}>
+        <GameScreen
+          key={gameSession}
+          initialState={activeGame ?? createInitialGameState()}
+          onRestart={startNewGame}
+          onShowTitle={() => setTitlePreview(true)}
+        />
+      </div>
+      {showTitle && (
+        <>
+          <MainMenu hasSavedGame={false} onContinue={() => {}} onStart={() => {}} />
+          <button
+            className="dev-panel dev-panel--closed"
+            type="button"
+            onClick={() => setTitlePreview(false)}
+          >
+            DEV: назад до сцен
+          </button>
+        </>
+      )}
+    </>
   );
 }

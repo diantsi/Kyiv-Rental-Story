@@ -1,6 +1,40 @@
+export type ChatReply = {
+  /** What Marta writes in the chat. */
+  text: string;
+  /** Short answer from the other side, shown right after. */
+  answer?: string;
+};
+
+export type ChatBubble = {
+  text: string;
+  /** Marta's own message (right side). */
+  mine?: boolean;
+  /** Appears a moment later, like a typed answer. */
+  delayed?: boolean;
+};
+
 export type SceneVisual = {
   backgroundColor?: string;
   backgroundImage?: string;
+  /** Optional looping-free visual effect played when the scene context appears. */
+  effect?: "lamp-flicker";
+  /** Alternative background for the context sheet (key from beatBackdrops). */
+  contextBackdrop?: "arrival";
+  /** Scene has an in-world listing page: laptop intro + "view listing" button. */
+  listing?: boolean;
+  /** Lines by this speaker appear as chat bubbles on a phone instead of in the dialogue box. */
+  chat?: {
+    speaker: string;
+    /**
+     * Optional replies Marta can type after the beat with the given index (the next beat must fit every option).
+     * They are cosmetic: no effects, and every option leads to the same next beat.
+     */
+    replies?: Record<number, ChatReply[]>;
+  };
+  /** Incoming phone call shown before the given beat; the player accepts or declines. */
+  /** "Call ended" screen shown before the given beat (e.g. right after Marta hangs up). */
+  callEnded?: { beforeBeat: number; requiresFlag?: StoryFlag };
+  call?: { beforeBeat: number; requiresFlag?: StoryFlag; autoHangUp?: boolean; autoAnswer?: boolean; caller?: "larysa" | "unknown" };
 };
 
 export type StoryFlag =
@@ -29,9 +63,25 @@ export type SceneId =
 
 export type StoryNodeId = SceneId | EndingId;
 
+export type SpriteMood =
+  | "angry"
+  | "annoyed"
+  | "confused"
+  | "happy"
+  | "sad"
+  | "sheepish"
+  | "showing"
+  | "shocked"
+  | "skeptical"
+  | "thinking";
+
 export type DialogueBeat = {
   speaker: string;
   text: string;
+  /** Optional alternative background for this beat (key from beatBackdrops). */
+  backdrop?: "arrival";
+  /** Optional sprite expression for the speaker; defaults to neutral. */
+  mood?: SpriteMood;
   condition?: {
     flag: StoryFlag;
     equals?: boolean;

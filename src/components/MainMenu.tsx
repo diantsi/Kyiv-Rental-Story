@@ -1,3 +1,5 @@
+import startButton from "../assets/start_button.png";
+
 type MainMenuProps = {
   hasSavedGame: boolean;
   onContinue: () => void;
@@ -11,13 +13,8 @@ export function MainMenu({
 }: MainMenuProps) {
   return (
     <main className="main-menu">
-      <section className="menu-panel" aria-labelledby="game-title">
-        <p className="eyebrow">Інтерактивна історія</p>
-        <h1 id="game-title">Київська оренда</h1>
-        <p className="menu-summary">
-          Інтерактивна вебновела про трьох друзів, обмежений бюджет і квартири,
-          які майже завжди мають приховане «але».
-        </p>
+      <h1 className="visually-hidden">Київська оренда</h1>
+      <section className="menu-panel" aria-label="Меню">
         <div className="menu-actions">
           {hasSavedGame ? (
             <>
@@ -37,8 +34,13 @@ export function MainMenu({
               </button>
             </>
           ) : (
-            <button className="primary-button" type="button" onClick={onStart}>
-              Почати гру
+            <button
+              className="image-button"
+              type="button"
+              aria-label="Почати гру"
+              onClick={onStart}
+            >
+              <img src={startButton} alt="" />
             </button>
           )}
         </div>
