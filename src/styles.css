@@ -2627,3 +2627,94 @@ body:has(.ending-overlay) .flash {
   bottom: 0.75rem;
   left: 0.75rem;
 }
+
+/* Collapsible budget and stress: the bars slide off to the left, a small tab stays. */
+.status-hud {
+  position: relative;
+  width: min(34rem, 82vw);
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.status-hud .status-bar {
+  width: 100%;
+  transition: opacity 0.4s ease;
+}
+
+.status-hud--collapsed {
+  transform: translateX(-100%);
+}
+
+.status-hud--collapsed .status-bar {
+  opacity: 0.4;
+}
+
+.status-hud__toggle {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 3.2rem;
+  padding: 0;
+  border: 1.5px solid #c9a24f;
+  border-left: 0;
+  border-radius: 0 0.9rem 0.9rem 0;
+  background: linear-gradient(180deg, rgba(48, 60, 76, 0.95), rgba(14, 19, 25, 0.95));
+  box-shadow: 0 0.35rem 0.9rem rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  color: #f6d98a;
+  cursor: pointer;
+  pointer-events: auto;
+  transform: translateY(-50%);
+  transition: box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.status-hud__toggle:hover,
+.status-hud__toggle:focus-visible {
+  box-shadow: 0 0.35rem 0.9rem rgba(0, 0, 0, 0.5), 0 0 1rem rgba(241, 202, 114, 0.4);
+  color: #fff0c0;
+}
+
+.status-hud__chevron {
+  width: 0.65rem;
+  height: 0.65rem;
+  border-bottom: 2.5px solid currentColor;
+  border-left: 2.5px solid currentColor;
+  transform: translateX(0.15rem) rotate(45deg);
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.status-hud--collapsed .status-hud__chevron {
+  transform: translateX(-0.15rem) rotate(-135deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .status-hud,
+  .status-hud .status-bar,
+  .status-hud__chevron {
+    transition: none;
+  }
+}
+
+/* Softer tab and a gentler slide. */
+.status-hud {
+  transition: transform 0.75s cubic-bezier(0.45, 0.05, 0.25, 1);
+}
+
+.status-hud .status-bar {
+  transition: opacity 0.75s ease;
+}
+
+.status-hud__toggle {
+  left: calc(100% + 0.35rem);
+  width: 2.1rem;
+  height: 2.9rem;
+  border: 1.5px solid rgba(201, 162, 79, 0.85);
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(48, 60, 76, 0.92), rgba(14, 19, 25, 0.92));
+  backdrop-filter: blur(4px);
+}
+
+.status-hud__chevron {
+  transition: transform 0.75s cubic-bezier(0.45, 0.05, 0.25, 1);
+}
