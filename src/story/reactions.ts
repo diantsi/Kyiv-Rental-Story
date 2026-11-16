@@ -97,14 +97,14 @@ export const choiceReactions: Record<string, DialogueBeat[]> = {
   ],
   "08O-B": [
     { speaker: "Марта", text: "Нам по двадцять сім, усі працюємо повний день.", mood: "confused" },
-    { speaker: "Оксана", text: "Чудово! Тоді приїжджайте сьогодні, я їх більше нікому не покажу.", mood: "thinking" },
-    { speaker: "Оля", text: "Марто... ти щойно збрехала їй у вічі.", mood: "shocked" },
+    { speaker: "Оксана", text: "Чудово! Тоді приїжджайте сьогодні, я її більше нікому не покажу.", mood: "thinking" },
+    { speaker: "Оля", text: "Марто... ти щойно їй збрехала.", mood: "shocked" },
     { speaker: "Макс", text: "Зате спрацювало. Принаймні поки що.", mood: "sheepish" },
   ],
   "08O-C": [
     { speaker: "Марта", text: "Питання про наших батьків надто особисте. Ми завершуємо розмову.", mood: "angry" },
     { speaker: "Оксана", text: "Як хочете. Охочих багато.", mood: "angry" },
-    { speaker: "Оля", text: "Нарешті хтось сказав їй це в обличчя.", mood: "happy" },
+    { speaker: "Оля", text: "Нарешті хтось сказав їй це прямо.", mood: "happy" },
   ],
 
   // 10S — the scam in Viber
