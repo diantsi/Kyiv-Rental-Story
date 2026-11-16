@@ -1870,3 +1870,36 @@ button:focus-visible {
     animation: none !important;
   }
 }
+
+.hud-corner {
+  position: fixed;
+  top: clamp(0.5rem, 2vw, 1rem);
+  left: clamp(0.5rem, 2vw, 1rem);
+  z-index: 6;
+  display: grid;
+  justify-items: start;
+  gap: 0.4rem;
+  pointer-events: none;
+}
+
+.hud-corner .status-bar {
+  position: static;
+}
+
+.menu-button {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 0.8rem;
+  background: rgba(11, 15, 18, 0.78);
+  backdrop-filter: blur(6px);
+  color: #f5f1e8;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.menu-button:hover,
+.menu-button:focus-visible {
+  background: rgba(40, 48, 56, 0.9);
+}

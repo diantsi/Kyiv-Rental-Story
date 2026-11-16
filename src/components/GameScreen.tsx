@@ -36,10 +36,11 @@ const CHOICE_BEAT: DialogueBeat = { speaker: "Марта", text: "", mood: "thin
 type GameScreenProps = {
   initialState: GameState;
   onRestart: () => void;
+  onMenu: () => void;
   onShowTitle?: () => void;
 };
 
-export function GameScreen({ initialState, onRestart, onShowTitle }: GameScreenProps) {
+export function GameScreen({ initialState, onRestart, onMenu, onShowTitle }: GameScreenProps) {
   const [state, dispatch] = useReducer(gameReducer, initialState);
   const [devView, setDevView] = useState<DevView | null>(null);
   const preview = import.meta.env.DEV ? devView : null;
@@ -150,7 +151,12 @@ export function GameScreen({ initialState, onRestart, onShowTitle }: GameScreenP
   const hud = (
     <>
       {flash && <div className={`flash flash--${flash.tone}`} key={flash.id} aria-hidden="true" />}
-      <StatusBar state={state} />
+            <div className="hud-corner">
+        <StatusBar state={state} />
+        <button className="menu-button" type="button" onClick={onMenu}>
+          ☰ Меню
+        </button>
+      </div>
       <ChangeToast changes={changes} />
     </>
   );

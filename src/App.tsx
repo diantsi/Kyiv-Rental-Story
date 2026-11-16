@@ -12,7 +12,7 @@ type AppScreen = "menu" | "game";
 
 export function App() {
   const [screen, setScreen] = useState<AppScreen>("menu");
-  const [savedGame] = useState(loadGameState);
+    const [savedGame, setSavedGame] = useState(loadGameState);
   const [activeGame, setActiveGame] = useState<GameState | null>(null);
   const [gameSession, setGameSession] = useState(0);
   // Dev only: title screen opened from the dev panel; the game stays mounted.
@@ -35,6 +35,11 @@ export function App() {
     setScreen("game");
   }
 
+    function goToMenu() {
+    setSavedGame(loadGameState());
+    setScreen("menu");
+  }
+
   if (screen === "menu") {
     return (
       <MainMenu
@@ -54,6 +59,7 @@ export function App() {
           key={gameSession}
           initialState={activeGame ?? createInitialGameState()}
           onRestart={startNewGame}
+          onMenu={goToMenu}
           onShowTitle={() => setTitlePreview(true)}
         />
       </div>
