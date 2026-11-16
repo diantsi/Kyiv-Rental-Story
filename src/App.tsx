@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { GameScreen } from "./components/GameScreen";
 import { MainMenu } from "./components/MainMenu";
-import { SplashScreen } from "./components/SplashScreen";
 import { createInitialGameState } from "./story/gameState";
 import {
   clearGameState,
@@ -9,10 +8,10 @@ import {
 } from "./story/gameStorage";
 import type { GameState } from "./story/types";
 
-type AppScreen = "splash" | "menu" | "game";
+type AppScreen = "menu" | "game";
 
 export function App() {
-  const [screen, setScreen] = useState<AppScreen>("splash");
+  const [screen, setScreen] = useState<AppScreen>("menu");
   const [savedGame, setSavedGame] = useState(loadGameState);
   const [activeGame, setActiveGame] = useState<GameState | null>(null);
   const [gameSession, setGameSession] = useState(0);
@@ -39,10 +38,6 @@ export function App() {
   function goToMenu() {
     setSavedGame(loadGameState());
     setScreen("menu");
-  }
-
-  if (screen === "splash") {
-    return <SplashScreen onStart={() => setScreen("menu")} />;
   }
 
   if (screen === "menu") {
