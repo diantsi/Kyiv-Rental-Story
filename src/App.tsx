@@ -12,8 +12,8 @@ import type { GameState } from "./story/types";
 type AppScreen = "splash" | "menu" | "game";
 
 export function App() {
-  const [screen, setScreen] = useState<AppScreen>("splash");
-  const [savedGame] = useState(loadGameState);
+  const [screen, setScreen] = useState<AppScreen>("menu");
+  const [savedGame, setSavedGame] = useState(loadGameState);
   const [activeGame, setActiveGame] = useState<GameState | null>(null);
   const [gameSession, setGameSession] = useState(0);
   // Dev only: title screen opened from the dev panel; the game stays mounted.
@@ -36,8 +36,9 @@ export function App() {
     setScreen("game");
   }
 
-  if (screen === "splash") {
-    return <SplashScreen onStart={() => setScreen("menu")} />;
+  function goToMenu() {
+    setSavedGame(loadGameState());
+    setScreen("menu");
   }
 
   if (screen === "menu") {
@@ -59,12 +60,13 @@ export function App() {
           key={gameSession}
           initialState={activeGame ?? createInitialGameState()}
           onRestart={startNewGame}
+          onMenu={goToMenu}
           onShowTitle={() => setTitlePreview(true)}
         />
       </div>
       {showTitle && (
         <>
-          <MainMenu hasSavedGame={false} onContinue={() => {}} onStart={() => {}} />
+          <MainMenu hasSavedGame={false} onContinue={() => { }} onStart={() => { }} />
           <button
             className="dev-panel dev-panel--closed"
             type="button"
