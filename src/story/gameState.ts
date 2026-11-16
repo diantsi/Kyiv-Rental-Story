@@ -18,7 +18,6 @@ const initialFlags: Record<StoryFlag, boolean> = {
   contract_checked: false,
   documents_checked: false,
   lied_to_oksana: false,
-  scam_recognized: false,
 };
 
 export function createInitialGameState(): GameState {
@@ -102,7 +101,11 @@ export function getVisibleBeats(node: StoryNode, state: GameState) {
     }
 
     const expectedValue = beat.condition.equals ?? true;
-    return state.flags[beat.condition.flag] === expectedValue;
+    const actualValue =
+      "choice" in beat.condition
+        ? state.choices.includes(beat.condition.choice)
+        : state.flags[beat.condition.flag];
+    return actualValue === expectedValue;
   });
 }
 

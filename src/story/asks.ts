@@ -71,7 +71,7 @@ export const beatAsks: Record<string, StoryAsk> = {
         replies: [
           { speaker: "Ігнат", text: "Какая разніца? Хазяїн єсть, а я єго права рука, понімаєш? Я чєловєк дєла!", mood: "showing" },
           { speaker: "Оля", text: "«Права рука хазяїна» звучить страшно.", mood: "shocked" },
-          { speaker: "Макс", text: "Ми точно квартиру орендуємо? ", mood: "happy" },
+          { speaker: "Макс", text: "Ми точно квартиру орендуємо?", mood: "happy" },
         ],
       },
       {
@@ -101,7 +101,7 @@ export const beatAsks: Record<string, StoryAsk> = {
         ],
       },
       {
-        label: "Чому вдень не можна приходити?",
+        label: "То власник може прийти коли завгодно?",
         replies: [
           { speaker: "Ігнат", text: "Та хазяїн коли єму удобно, тоді й приходить! Ти шо, графік єму будеш виписувать? Він чєловєк вольний, как вітєр!", mood: "showing" },
           { speaker: "Оля", text: "Вітер хоча б не вимагає п’ять тисяч за прибирання.", mood: "annoyed" },

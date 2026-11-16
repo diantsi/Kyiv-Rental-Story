@@ -14,7 +14,6 @@ const storyFlags: StoryFlag[] = [
   "contract_checked",
   "documents_checked",
   "lied_to_oksana",
-  "scam_recognized",
 ];
 
 const endingIds = new Set<EndingId>([
@@ -50,12 +49,18 @@ function isIntegerInRange(value: unknown, minimum: number, maximum: number) {
   );
 }
 
+// Extra keys are allowed so saves from older versions (with since-removed flags) still load.
 function isValidFlags(value: unknown): value is GameState["flags"] {
   return (
     isRecord(value) &&
-    Object.keys(value).length === storyFlags.length &&
     storyFlags.every((flag) => typeof value[flag] === "boolean")
   );
+}
+
+function pickFlags(value: GameState["flags"]): GameState["flags"] {
+  return Object.fromEntries(
+    storyFlags.map((flag) => [flag, value[flag]]),
+  ) as GameState["flags"];
 }
 
 function isValidChoices(value: unknown): value is string[] {
@@ -117,7 +122,7 @@ export function parseGameState(value: unknown): GameState | null {
     maksRelationship: value.maksRelationship as number,
     budgetUAH: value.budgetUAH as number,
     stress: value.stress as number,
-    flags: value.flags,
+    flags: pickFlags(value.flags),
     choices: value.choices,
     saveVersion: SAVE_VERSION,
   };

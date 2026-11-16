@@ -43,8 +43,7 @@ export type StoryFlag =
   | "larysa_contact"
   | "contract_checked"
   | "documents_checked"
-  | "lied_to_oksana"
-  | "scam_recognized";
+  | "lied_to_oksana";
 
 export type EndingId = `F${1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9}`;
 
@@ -84,10 +83,10 @@ export type DialogueBeat = {
   backdrop?: "arrival";
   /** Optional sprite expression for the speaker; defaults to neutral. */
   mood?: SpriteMood;
-  condition?: {
-    flag: StoryFlag;
-    equals?: boolean;
-  };
+  /** Show the beat only if a flag has the given value, or a choice was (not) made earlier. */
+  condition?:
+    | { flag: StoryFlag; equals?: boolean }
+    | { choice: string; equals?: boolean };
 };
 
 export type StoryEffects = {
