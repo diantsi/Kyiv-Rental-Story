@@ -15,6 +15,8 @@ import type {
   StoryChoice,
   StoryNodeId,
 } from "../story/types";
+import { playChooseSound, playSceneMusic, stopSceneMusic } from "../audio/sound";
+import { sceneMusic } from "../story/sceneMusic";
 import { ChoiceList } from "./ChoiceList";
 import { ChangeToast } from "./ChangeToast";
 import { EndingSummary } from "./EndingSummary";
@@ -61,6 +63,12 @@ export function GameScreen({ initialState, onRestart, onShowTitle }: GameScreenP
     thenAsk?: boolean;
   } | null>(null);
   const [asking, setAsking] = useState(false);
+
+  // Reactions to a choice still belong to the scene it was made in, so its music keeps playing.
+  const musicTrack = sceneMusic[reaction?.sceneId ?? scene.id];
+  useEffect(() => playSceneMusic(musicTrack), [musicTrack]);
+  useEffect(() => stopSceneMusic, []);
+
   // Questions already asked, by `${sceneId}:${beatIndex}`; asked ones disappear from the list.
   const [askedLabels, setAskedLabels] = useState<Record<string, string[]>>({});
   const ask = beatAsks[`${scene.id}:${beatIndex}`];
@@ -272,7 +280,10 @@ export function GameScreen({ initialState, onRestart, onShowTitle }: GameScreenP
                 className="choice-button"
                 key={option.label}
                 type="button"
-                onClick={() => pickAsk(option.label, option.replies)}
+                onClick={() => {
+                  playChooseSound();
+                  pickAsk(option.label, option.replies);
+                }}
               >
                 {option.label}
               </button>
@@ -281,6 +292,7 @@ export function GameScreen({ initialState, onRestart, onShowTitle }: GameScreenP
               className="choice-button"
               type="button"
               onClick={() => {
+                playChooseSound();
                 setAsking(false);
                 advanceBeat();
               }}

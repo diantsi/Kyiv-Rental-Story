@@ -1870,3 +1870,56 @@ button:focus-visible {
     animation: none !important;
   }
 }
+
+/* ---------- Splash: one click unlocks sound before the title screen ---------- */
+.splash-screen {
+  position: relative;
+  display: grid;
+  place-items: end center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 1rem clamp(3rem, 12vh, 7rem);
+  border: 0;
+  color: #f5f1e8;
+  background: #0d1216 url("./assets/cover.jpeg") center / contain no-repeat;
+  cursor: pointer;
+}
+
+.splash-screen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 11, 14, 0.62);
+}
+
+.splash-screen:focus-visible {
+  outline: none;
+}
+
+.splash-screen__text {
+  position: relative;
+  padding: 0.85rem 1.6rem;
+  border: 1px solid rgba(241, 202, 114, 0.55);
+  border-radius: 999px;
+  background: rgba(13, 18, 22, 0.7);
+  font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+  letter-spacing: 0.04em;
+  animation: splash-pulse 2.4s ease-in-out infinite;
+}
+
+.splash-screen:focus-visible .splash-screen__text {
+  outline: 3px solid #f1ca72;
+  outline-offset: 3px;
+}
+
+@keyframes splash-pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-screen__text {
+    animation: none;
+  }
+}

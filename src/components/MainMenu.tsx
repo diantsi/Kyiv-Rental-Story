@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import startButton from "../assets/start_button.png";
+import { startMenuMusic } from "../audio/sound";
 
 type MainMenuProps = {
   hasSavedGame: boolean;
@@ -11,6 +13,8 @@ export function MainMenu({
   onContinue,
   onStart,
 }: MainMenuProps) {
+  useEffect(() => startMenuMusic(), []);
+
   return (
     <main className="main-menu">
       <h1 className="visually-hidden">Київська оренда</h1>

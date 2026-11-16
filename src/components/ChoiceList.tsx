@@ -1,3 +1,4 @@
+import { playChooseSound } from "../audio/sound";
 import type { StoryChoice } from "../story/types";
 
 type ChoiceListProps = {
@@ -15,7 +16,10 @@ export function ChoiceList({ choices, onChoose }: ChoiceListProps) {
             className="choice-button"
             key={choice.id}
             type="button"
-            onClick={() => onChoose(choice)}
+            onClick={() => {
+              playChooseSound();
+              onChoose(choice);
+            }}
           >
             {choice.label}
           </button>

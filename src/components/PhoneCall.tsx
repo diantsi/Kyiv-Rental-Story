@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import callScreen from "../assets/larysa_call.png";
 import unknownCallScreen from "../assets/unknown_call.png";
 import messageScreen from "../assets/larysa_message.png";
+import { startPhoneRinging, stopPhoneRinging } from "../audio/sound";
 
 type PhoneCallProps = {
   onAccept: () => void;
@@ -40,6 +41,13 @@ export function PhoneCall({ onAccept, autoHangUp, autoAnswer, caller = "larysa" 
     );
     return () => window.clearTimeout(timer);
   }, [autoHangUp, showMessage]);
+
+  // The ringtone plays while the phone rings; declining restarts it, the message stops it.
+  useEffect(() => {
+    if (showMessage) return;
+    startPhoneRinging();
+    return stopPhoneRinging;
+  }, [showMessage, ringKey]);
 
   // Auto mode: a click skips ahead.
   function skip() {

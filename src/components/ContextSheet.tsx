@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { startTextWriting, stopTextWriting } from "../audio/sound";
 import { lampOffBackground } from "../story/sceneBackgrounds";
 import type { StoryNode } from "../story/types";
 
@@ -63,6 +64,14 @@ export function ContextSheet({ scene, onContinue }: ContextSheetProps) {
     }, 30);
     return () => window.clearInterval(timer);
   }, [showTitle, text]);
+
+  // Typing sound plays only while letters are still appearing.
+  const typing = !showTitle && !done;
+  useEffect(() => {
+    if (!typing) return;
+    startTextWriting();
+    return stopTextWriting;
+  }, [typing]);
 
   if (showTitle) {
     return (
