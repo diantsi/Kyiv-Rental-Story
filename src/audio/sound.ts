@@ -9,7 +9,25 @@ import positiveMusicUrl from "../../sound/positive_background_music.mp3";
 import sadMusicUrl from "../../sound/sad_background_music.mp3";
 import type { MusicTrack } from "../story/sceneMusic";
 
-const SCENE_MUSIC_VOLUME = 0.5;
+const SCENE_MUSIC_BASE = 0.5;
+const MENU_MUSIC_BASE = 0.6;
+const SETTINGS_KEY = "kyiv-rental-volume";
+
+type VolumeSettings = { music: number; effects: number };
+
+function loadVolume(): VolumeSettings {
+  try {
+    const raw = JSON.parse(localStorage.getItem(SETTINGS_KEY) ?? "null");
+    const clamp = (v: unknown) => (typeof v === "number" ? Math.min(1, Math.max(0, v)) : 1);
+    if (raw) return { music: clamp(raw.music), effects: clamp(raw.effects) };
+  } catch {
+    // storage unavailable or corrupt: use defaults
+  }
+  return { music: 1, effects: 1 };
+}
+
+const volume = loadVolume();
+const sceneMusicVolume = () => SCENE_MUSIC_BASE * volume.music;
 const FADE_MS = 800;
 
 const sceneTracks: Record<MusicTrack, HTMLAudioElement> = {
@@ -49,7 +67,7 @@ export function playSceneMusic(track: MusicTrack) {
   const next = sceneTracks[track];
   next.volume = 0;
   void play(next);
-  fade(next, SCENE_MUSIC_VOLUME);
+  fade(next, sceneMusicVolume());
 }
 
 export function stopSceneMusic() {
@@ -62,14 +80,14 @@ export function stopSceneMusic() {
 }
 
 const chooseSound = new Audio(chooseSoundUrl);
-chooseSound.volume = 0.8;
+chooseSound.volume = 0.8 * volume.effects;
 
 const textWriting = new Audio(textWritingUrl);
-textWriting.volume = 0.5;
+textWriting.volume = 0.5 * volume.effects;
 
 const menuMusic = new Audio(menuMusicUrl);
 menuMusic.loop = true;
-menuMusic.volume = 0.6;
+menuMusic.volume = MENU_MUSIC_BASE * volume.music;
 
 function play(audio: HTMLAudioElement) {
   audio.currentTime = 0;
@@ -84,7 +102,7 @@ export function playChooseSound() {
 textWriting.loop = true;
 
 const callingSound = new Audio(callingSoundUrl);
-callingSound.volume = 0.8;
+callingSound.volume = 0.8 * volume.effects;
 const CALLING_REPEATS = 2;
 let callingLeft = 0;
 callingSound.addEventListener("ended", () => {
@@ -105,7 +123,7 @@ export function stopCallingSound() {
 
 const phoneRinging = new Audio(phoneRingingUrl);
 phoneRinging.loop = true;
-phoneRinging.volume = 0.8;
+phoneRinging.volume = 0.8 * volume.effects;
 
 /** Loops the ringtone (from the start) while an incoming call is on screen. */
 export function startPhoneRinging() {
@@ -168,4 +186,29 @@ export function startMenuMusic() {
     events.forEach((e) => document.removeEventListener(e, retry));
     menuMusic.pause();
   };
+}
+
+export function getVolume(): VolumeSettings {
+  return { ...volume };
+}
+
+/** Sets music and/or effects volume (0–1), applies it live and saves it. */
+export function setVolume(next: Partial<VolumeSettings>) {
+  Object.assign(volume, next);
+  menuMusic.volume = MENU_MUSIC_BASE * volume.music;
+  if (currentTrack) {
+    const audio = sceneTracks[currentTrack];
+    window.clearInterval(fades.get(audio));
+    fades.delete(audio);
+    audio.volume = sceneMusicVolume();
+  }
+  chooseSound.volume = 0.8 * volume.effects;
+  textWriting.volume = 0.5 * volume.effects;
+  callingSound.volume = 0.8 * volume.effects;
+  phoneRinging.volume = 0.8 * volume.effects;
+  try {
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(volume));
+  } catch {
+    // ignore
+  }
 }

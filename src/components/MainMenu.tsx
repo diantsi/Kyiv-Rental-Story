@@ -3,6 +3,7 @@ import continueButton from "../assets/continue_button.png";
 import restartButton from "../assets/restart_button.png";
 import startButton from "../assets/start_button.png";
 import { startMenuMusic } from "../audio/sound";
+import { SettingsButton } from "./SettingsButton";
 
 type MainMenuProps = {
   hasSavedGame: boolean;
@@ -19,6 +20,7 @@ export function MainMenu({
 
   return (
     <main className="main-menu">
+      <SettingsButton />
       <h1 className="visually-hidden">Київська оренда</h1>
       <section className="menu-panel" aria-label="Меню">
         <div className="menu-actions">

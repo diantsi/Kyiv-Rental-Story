@@ -2725,3 +2725,158 @@ body:has(.ending-overlay) .flash {
 .status-hud__chevron {
   transition: transform 0.75s cubic-bezier(0.45, 0.05, 0.25, 1);
 }
+
+/* Settings: gear next to the menu button, volume dialog. */
+.settings-button {
+  position: fixed;
+  top: calc(clamp(0.4rem, 1.2vw, 0.8rem) + 3.6rem);
+  right: clamp(0.5rem, 1.6vw, 1rem);
+  z-index: 30;
+  pointer-events: auto;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0;
+  border: 1.5px solid #c9a24f;
+  border-radius: 0.9rem;
+  background: linear-gradient(180deg, rgba(48, 60, 76, 0.95), rgba(14, 19, 25, 0.95));
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  color: #f6d98a;
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.settings-button:hover,
+.settings-button:focus-visible {
+  color: #fff0c0;
+  transform: translateY(-1px);
+}
+
+/* On the main menu there is no menu button: the gear takes the corner. */
+.main-menu > .settings-button {
+  top: clamp(0.4rem, 1.2vw, 0.8rem);
+}
+
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(6, 9, 13, 0.6);
+  backdrop-filter: blur(3px);
+}
+
+.settings-card {
+  display: grid;
+  gap: 1.2rem;
+  width: min(24rem, 100%);
+  padding: 1.5rem 1.6rem;
+  border: 1.5px solid #c9a24f;
+  border-radius: 1.2rem;
+  background: linear-gradient(180deg, rgba(48, 60, 76, 0.97), rgba(14, 19, 25, 0.98));
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(241, 202, 114, 0.18);
+  color: #f3ead2;
+}
+
+.settings-card h2 {
+  margin: 0;
+  color: #f6d98a;
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+}
+
+.settings-row {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.settings-row span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-row b {
+  color: #f6d98a;
+}
+
+.settings-row input[type="range"] {
+  width: 100%;
+  accent-color: #c9a24f;
+}
+
+.settings-card__close {
+  justify-self: center;
+  padding: 0.55rem 1.8rem;
+  border: 1.5px solid #c9a24f;
+  border-radius: 0.9rem;
+  background: rgba(201, 162, 79, 0.18);
+  color: #f6d98a;
+  font-weight: 700;
+}
+
+.settings-relations {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.settings-relations h3 {
+  margin: 0;
+  color: #f6d98a;
+  font-size: 1rem;
+}
+
+.settings-relation {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.settings-relation span {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-relation b {
+  color: #f6d98a;
+}
+
+.settings-relation__track {
+  height: 0.55rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.settings-relation__track i {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #b9893a, #f1ca72);
+}
+
+.settings-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.settings-tab {
+  padding: 0.5rem;
+  border: 1.5px solid rgba(201, 162, 79, 0.5);
+  border-radius: 0.8rem;
+  background: transparent;
+  color: #d9cfae;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.settings-tab--active {
+  border-color: #c9a24f;
+  background: rgba(201, 162, 79, 0.22);
+  color: #f6d98a;
+}

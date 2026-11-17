@@ -1,3 +1,4 @@
+import { SettingsButton } from "./SettingsButton";
 import { useEffect, useReducer, useRef, useState } from "react";
 import {
   gameReducer,
@@ -169,6 +170,9 @@ export function GameScreen({ initialState, onRestart, onMenu, onShowTitle }: Gam
           <span className="menu-button__icon" aria-hidden="true" />
           Меню
         </button>
+        <SettingsButton
+          relationships={{ olia: state.oliaRelationship, maks: state.maksRelationship }}
+        />
       </div>
       <ChangeToast changes={changes} />
     </>
